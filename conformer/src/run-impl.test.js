@@ -8,18 +8,11 @@ const path = require('path');
 const rootDir = path.resolve(__dirname, '../..');
 
 function make(args, env) {
-  const platformEnv = process.platform === "linux"
-    ? { MAKEFLAGS: "--no-print-directory" }
-    : {};
-  return spawnSync('make', args, {
+  return spawnSync('make', ["-s", ...args], {
     cwd: rootDir,
     encoding: 'utf8',
     timeout: 30_000,
-    env: {
-      ...platformEnv,
-      ...process.env,
-      ...env,
-    },
+    env: { ...process.env, ...env },
   });
 }
 
