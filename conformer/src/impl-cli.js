@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
 const { getToolEnv } = require('./tools');
+const { parseHarnessOutput } = require('./protocol');
 
 function getRootDir() {
   const baseDir = path.resolve(__dirname, '..');
@@ -67,11 +68,11 @@ function spawnImplSync(implDef, rootDir, args) {
 function parseImplOutput(result) {
   if (result.error) return { error: result.error.message };
   if (result.status !== 0) return { error: `process exited with code ${result.status}`, stderr: result.stderr.toString() };
-  try {
-    return { result: JSON.parse(result.stdout.toString()) };
-  } catch {
-    return { error: 'invalid JSON output', stderr: result.stderr.toString() };
+  const parsed = parseHarnessOutput(result.stdout.toString());
+  if (parsed.error) {
+    return { error: parsed.error, stderr: result.stderr.toString() };
   }
+  return { result: parsed.result };
 }
 
 module.exports = {

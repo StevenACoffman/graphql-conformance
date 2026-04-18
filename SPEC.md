@@ -176,10 +176,34 @@ The command must:
    `Subscription`).
 2. Parse and execute the query (with variables if provided). Queries may include
    `@defer` and `@stream`.
-3. Print a single synchronous GraphQL result as JSON to stdout. Implementations must
-   not emit multipart or streamed output; if the underlying library supports
-   incremental delivery, the harness must normalize it to one JSON result.
+3. Print either:
+   - a single GraphQL result as JSON to stdout, or
+   - a line-delimited conformer incremental protocol stream on stdout
+
+   Harnesses must not emit HTTP multipart framing or transport-specific streamed
+   output. If the underlying library supports incremental delivery, the harness
+   should translate native incremental payloads into the conformer protocol and
+   let the coordinator normalize them.
 4. Exit with code 0 on success
+
+### Conformer incremental protocol
+
+For incremental execution, a harness may emit one JSON object per line using
+protocol `conformer-stream-v1`.
+
+- `{"protocol":"conformer-stream-v1","kind":"initial", ... }`
+- `{"protocol":"conformer-stream-v1","kind":"patch", ... }`
+- `{"protocol":"conformer-stream-v1","kind":"complete", ... }`
+
+Rules:
+
+- `initial` must be the first event
+- `complete` must be the final event
+- `patch.path` is absolute from the GraphQL response root
+- `patch.data` represents a deferred object patch
+- `patch.items` represents streamed list items
+- harnesses should translate library-specific pending IDs / subpaths into this
+  absolute-path form rather than merging patches themselves
 
 For example, the graphql-js reference implementation runs `node index.js` which
 loads the schema, wires it, executes the query, and prints the result. The

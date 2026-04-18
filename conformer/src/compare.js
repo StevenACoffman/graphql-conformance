@@ -5,7 +5,9 @@ function normalizeHarnessError(result) {
 
   const error = String(result.error);
   if (error === 'timeout') return { kind: 'timeout' };
-  if (error === 'invalid JSON output') return { kind: 'invalid-json' };
+  if (error === 'invalid JSON output' || error === 'invalid protocol output') {
+    return { kind: 'invalid-output' };
+  }
 
   const exitMatch = error.match(/^process exited with code (-?\d+)$/);
   if (exitMatch) {

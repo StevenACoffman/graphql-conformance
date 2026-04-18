@@ -1,6 +1,7 @@
 'use strict';
 
 const { spawn } = require('child_process');
+const { createHarnessOutputAccumulator } = require('./protocol');
 
 const TIMEOUT_MS = 30_000;
 
@@ -11,10 +12,12 @@ function runHarness(command, cwd, args, env) {
     const opts = { cwd };
     if (env) opts.env = env;
     const child = spawn(cmd, [...cmdArgs, ...args], opts);
+    const stdoutAccumulator = createHarnessOutputAccumulator();
 
-    let stdout = '';
     let stderr = '';
-    child.stdout.on('data', (d) => { stdout += d; });
+    child.stdout.on('data', (d) => {
+      stdoutAccumulator.push(d);
+    });
     child.stderr.on('data', (d) => { stderr += d; });
 
     const timer = setTimeout(() => {
@@ -32,10 +35,11 @@ function runHarness(command, cwd, args, env) {
         if (code !== 0) {
           resolve({ error: `process exited with code ${code}`, stderr });
         } else {
-          try {
-            resolve({ result: JSON.parse(stdout) });
-          } catch {
-            resolve({ error: 'invalid JSON output', stderr });
+          const parsed = stdoutAccumulator.finish();
+          if (parsed.error) {
+            resolve({ error: parsed.error, stderr });
+          } else {
+            resolve({ result: parsed.result });
           }
         }
       }

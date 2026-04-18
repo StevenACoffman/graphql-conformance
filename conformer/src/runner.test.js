@@ -26,6 +26,18 @@ describe('runHarness', () => {
     assert.equal(result.error, 'invalid JSON output');
   });
 
+  it('normalizes streamed protocol output', async () => {
+    const code = [
+      'console.log(JSON.stringify({protocol:"conformer-stream-v1",kind:"initial",data:{hero:{}}}))',
+      'console.log(JSON.stringify({protocol:"conformer-stream-v1",kind:"patch",path:["hero"],data:{name:"str"}}))',
+      'console.log(JSON.stringify({protocol:"conformer-stream-v1",kind:"complete"}))',
+    ].join(';');
+    const result = await runHarness(['node', '-e', code], '/tmp', []);
+    assert.deepStrictEqual(result.result, {
+      data: { hero: { name: 'str' } },
+    });
+  });
+
   it('captures stderr', async () => {
     const result = await runHarness(
       ['node', '-e', 'console.error("oops"); process.exit(1)'], '/tmp', []

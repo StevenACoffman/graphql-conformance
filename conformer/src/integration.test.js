@@ -7,7 +7,6 @@ const fs = require('fs');
 const path = require('path');
 const os = require('os');
 const { ResultsStore } = require('../../results');
-const { getVersion } = require('./builder');
 const { discoverCorpus } = require('./corpus');
 
 const baseDir = path.resolve(__dirname, '..');
@@ -27,20 +26,6 @@ beforeEach(() => {
 afterEach(() => {
   fs.rmSync(tmpDir, { recursive: true, force: true });
 });
-
-const testConfig = {
-  reference: 'graphql-js-17',
-  impls: {
-    'graphql-js-17': {
-      path: './impls/graphql-js-17',
-      command: ['node', 'index.js'],
-    },
-    'graphql-js-copy': {
-      path: './impls/graphql-js-17',
-      command: ['node', 'index.js'],
-    },
-  },
-};
 
 function runConformer(env = {}) {
   return {
@@ -71,11 +56,52 @@ function writeNodeImpl(dir, source) {
   fs.writeFileSync(path.join(dir, 'index.js'), source);
 }
 
+function writeProtocolImpl(dir, eventsSource) {
+  writeNodeImpl(dir, `'use strict';
+const events = ${eventsSource};
+for (const event of events) {
+  process.stdout.write(JSON.stringify(event) + '\\n');
+}
+`);
+}
+
+function writeStaticJsonImpl(dir, resultSource) {
+  writeNodeImpl(dir, `'use strict';
+process.stdout.write(JSON.stringify(${resultSource}));
+`);
+}
+
 describe('integration: self-comparison', () => {
   it('graphql-js vs itself produces all true', () => {
-    fs.writeFileSync(tmpConfigPath, JSON.stringify(testConfig, null, 2));
+    const corpusDir = path.join(tmpDir, 'corpus');
+    const refDir = path.join(tmpDir, 'ref-impl');
+    const conformantDir = path.join(tmpDir, 'conformant-impl');
 
-    const { cmd, args, opts } = runConformer();
+    writeCorpusCase(
+      corpusDir,
+      'ok-test',
+      'ok-query',
+      'type Query { ok: String }',
+      '{ ok }',
+    );
+    writeStaticJsonImpl(refDir, `{ data: { ok: 'value' } }`);
+    writeStaticJsonImpl(conformantDir, `{ data: { ok: 'value' } }`);
+
+    fs.writeFileSync(tmpConfigPath, JSON.stringify({
+      reference: 'ref',
+      impls: {
+        ref: {
+          path: refDir,
+          command: ['node', 'index.js'],
+        },
+        conformant: {
+          path: conformantDir,
+          command: ['node', 'index.js'],
+        },
+      },
+    }, null, 2));
+
+    const { cmd, args, opts } = runConformer({ CORPUS_DIR: corpusDir });
     execFileSync(cmd, args, opts);
 
     const store = ResultsStore.fromDirectory(tmpResultsDir);
@@ -83,21 +109,47 @@ describe('integration: self-comparison', () => {
 
     assert.ok(runResult, 'should have a run result');
     assert.ok(runResult.timestamp);
-    assert.equal(runResult.reference.name, 'graphql-js-17');
+    assert.equal(runResult.reference.name, 'ref');
     assert.ok(runResult.reference.sha);
-    assert.ok(runResult.conformants['graphql-js-copy']);
-    assert.ok(runResult.conformants['graphql-js-copy'].sha);
+    assert.ok(runResult.conformants.conformant);
+    assert.ok(runResult.conformants.conformant.sha);
 
-    const failures = store.getImplFailures('graphql-js-copy');
-    assert.equal(failures.length, 0, 'graphql-js vs itself should have no failures');
+    const failures = store.getImplFailures('conformant');
+    assert.equal(failures.length, 0, 'identical temp impls should have no failures');
   });
 });
 
 describe('integration: incremental skip', () => {
   it('second run skips unchanged conformant and produces same results', () => {
-    fs.writeFileSync(tmpConfigPath, JSON.stringify(testConfig, null, 2));
+    const corpusDir = path.join(tmpDir, 'corpus');
+    const refDir = path.join(tmpDir, 'ref-impl');
+    const conformantDir = path.join(tmpDir, 'conformant-impl');
 
-    const { cmd, args, opts } = runConformer();
+    writeCorpusCase(
+      corpusDir,
+      'ok-test',
+      'ok-query',
+      'type Query { ok: String }',
+      '{ ok }',
+    );
+    writeStaticJsonImpl(refDir, `{ data: { ok: 'value' } }`);
+    writeStaticJsonImpl(conformantDir, `{ data: { ok: 'value' } }`);
+
+    fs.writeFileSync(tmpConfigPath, JSON.stringify({
+      reference: 'ref',
+      impls: {
+        ref: {
+          path: refDir,
+          command: ['node', 'index.js'],
+        },
+        conformant: {
+          path: conformantDir,
+          command: ['node', 'index.js'],
+        },
+      },
+    }, null, 2));
+
+    const { cmd, args, opts } = runConformer({ CORPUS_DIR: corpusDir });
     execFileSync(cmd, args, opts);
 
     const store1 = ResultsStore.fromDirectory(tmpResultsDir);
@@ -107,7 +159,7 @@ describe('integration: incremental skip', () => {
     assert.equal(run2proc.status, 0, 'second run should succeed');
 
     const stderr = run2proc.stderr.toString();
-    assert.ok(stderr.includes('Skipping conformant (graphql-js-copy)'),
+    assert.ok(stderr.includes('Skipping conformant (conformant)'),
       'should log that conformant was skipped');
 
     const store2 = ResultsStore.fromDirectory(tmpResultsDir);
@@ -117,25 +169,49 @@ describe('integration: incremental skip', () => {
     const run2 = store2.loadLatestRun();
 
     assert.deepStrictEqual(
-      run2.conformants['graphql-js-copy'].failuresByTestKey,
-      run1.conformants['graphql-js-copy'].failuresByTestKey,
+      run2.conformants.conformant.failuresByTestKey,
+      run1.conformants.conformant.failuresByTestKey,
       'skipped conformant should have same test results as prior run',
     );
   });
 
   it('reuses failure-only skipped results without persisting passing test rows', () => {
-    fs.writeFileSync(tmpConfigPath, JSON.stringify(testConfig, null, 2));
+    const corpusDir = path.join(tmpDir, 'corpus');
+    const refDir = path.join(tmpDir, 'ref-impl');
+    const conformantDir = path.join(tmpDir, 'conformant-impl');
 
-    const corpusTotal = discoverCorpus(path.join(rootDir, 'corpus')).length;
-    const refSha = getVersion(path.join(rootDir, 'impls', 'graphql-js-17'));
-    const conformantSha = getVersion(path.join(rootDir, 'impls', 'graphql-js-17'));
+    writeCorpusCase(
+      corpusDir,
+      'ok-test',
+      'ok-query',
+      'type Query { ok: String }',
+      '{ ok }',
+    );
+    writeStaticJsonImpl(refDir, `{ data: { ok: 'value' } }`);
+    writeStaticJsonImpl(conformantDir, `{ data: { ok: 'value' } }`);
+
+    fs.writeFileSync(tmpConfigPath, JSON.stringify({
+      reference: 'ref',
+      impls: {
+        ref: {
+          path: refDir,
+          command: ['node', 'index.js'],
+        },
+        conformant: {
+          path: conformantDir,
+          command: ['node', 'index.js'],
+        },
+      },
+    }, null, 2));
+
+    const corpusTotal = discoverCorpus(corpusDir).length;
     const store = ResultsStore.fromDirectory(tmpResultsDir);
     store.recordRun({
       id: 'prior-run',
       timestamp: '2026-03-18T00:00:00.000Z',
       reference: {
-        name: 'graphql-js-17',
-        sha: refSha,
+        name: 'ref',
+        sha: 'unknown',
         scoringModel: 'runnable-set-v1',
         total: corpusTotal,
         errors: 0,
@@ -143,28 +219,28 @@ describe('integration: incremental skip', () => {
         excluded: 0,
       },
       conformants: {
-        'graphql-js-copy': {
-          sha: conformantSha,
+        conformant: {
+          sha: 'unknown',
           total: corpusTotal,
-          passed: corpusTotal - 1,
+          passed: 0,
           failuresByTestKey: {
-            '0/0': { testKey: '0/0', error: 'seeded mismatch' },
+            'ok-test/ok-query': { testKey: 'ok-test/ok-query', error: 'seeded mismatch' },
           },
         },
       },
     });
 
-    const { cmd, args, opts } = runConformer();
+    const { cmd, args, opts } = runConformer({ CORPUS_DIR: corpusDir });
     const result = spawnSync(cmd, args, opts);
     assert.equal(result.status, 0, `stderr: ${result.stderr.toString()}`);
-    assert.match(result.stderr.toString(), /Skipping conformant \(graphql-js-copy\)/);
+    assert.match(result.stderr.toString(), /Skipping conformant \(conformant\)/);
 
     const latestRun = ResultsStore.fromDirectory(tmpResultsDir).loadLatestRunSummary();
-    assert.equal(latestRun.conformants['graphql-js-copy'].total, corpusTotal);
-    assert.equal(latestRun.conformants['graphql-js-copy'].passed, corpusTotal - 1);
+    assert.equal(latestRun.conformants.conformant.total, corpusTotal);
+    assert.equal(latestRun.conformants.conformant.passed, 0);
     assert.deepStrictEqual(
-      Object.keys(latestRun.conformants['graphql-js-copy'].failuresByTestKey),
-      ['0/0'],
+      Object.keys(latestRun.conformants.conformant.failuresByTestKey),
+      ['ok-test/ok-query'],
     );
   });
 });
@@ -326,5 +402,171 @@ process.stdout.write(JSON.stringify({ data: { ok: 'value' } }));
 
     assert.ok(!fs.existsSync(refLog), 'reference should not run when reusing prior reference exclusions');
     assert.ok(!fs.existsSync(conformantLog), 'conformant should not run when skipped');
+  });
+});
+
+describe('integration: streamed protocol', () => {
+  it('normalizes a streamed reference result before scoring a legacy conformant', () => {
+    const corpusDir = path.join(tmpDir, 'corpus');
+    const refDir = path.join(tmpDir, 'ref-impl');
+    const conformantDir = path.join(tmpDir, 'conformant-impl');
+
+    writeCorpusCase(
+      corpusDir,
+      'streamed-test',
+      'streamed-query',
+      'type Query { hero: Hero feed: [String] } type Hero { name: String }',
+      '{ hero { name } feed }',
+    );
+
+    writeProtocolImpl(refDir, `[
+  { protocol: 'conformer-stream-v1', kind: 'initial', data: { hero: {}, feed: [] } },
+  { protocol: 'conformer-stream-v1', kind: 'patch', path: ['hero'], data: { name: 'str' } },
+  { protocol: 'conformer-stream-v1', kind: 'patch', path: ['feed'], items: ['a', 'b'] },
+  { protocol: 'conformer-stream-v1', kind: 'complete' },
+]`);
+
+    writeNodeImpl(conformantDir, `'use strict';
+process.stdout.write(JSON.stringify({
+  data: {
+    hero: { name: 'str' },
+    feed: ['a', 'b'],
+  },
+}));
+`);
+
+    fs.writeFileSync(tmpConfigPath, JSON.stringify({
+      reference: 'ref',
+      impls: {
+        ref: {
+          path: refDir,
+          command: ['node', 'index.js'],
+        },
+        conformant: {
+          path: conformantDir,
+          command: ['node', 'index.js'],
+        },
+      },
+    }, null, 2));
+
+    const { cmd, args, opts } = runConformer({ CORPUS_DIR: corpusDir });
+    execFileSync(cmd, args, opts);
+
+    const run = ResultsStore.fromDirectory(tmpResultsDir).loadLatestRunSummary();
+    assert.equal(run.reference.total, 1);
+    assert.equal(run.reference.excluded, 0);
+    assert.equal(run.conformants.conformant.total, 1);
+    assert.equal(run.conformants.conformant.passed, 1);
+    assert.deepStrictEqual(run.conformants.conformant.failuresByTestKey, {});
+  });
+
+  it('stores assembled expected and actual results when streamed outputs differ', () => {
+    const corpusDir = path.join(tmpDir, 'corpus');
+    const refDir = path.join(tmpDir, 'ref-impl');
+    const conformantDir = path.join(tmpDir, 'conformant-impl');
+
+    writeCorpusCase(
+      corpusDir,
+      'streamed-test',
+      'streamed-query',
+      'type Query { hero: Hero feed: [String] } type Hero { name: String }',
+      '{ hero { name } feed }',
+    );
+
+    writeProtocolImpl(refDir, `[
+  { protocol: 'conformer-stream-v1', kind: 'initial', data: { hero: {}, feed: [] } },
+  { protocol: 'conformer-stream-v1', kind: 'patch', path: ['hero'], data: { name: 'str' } },
+  { protocol: 'conformer-stream-v1', kind: 'patch', path: ['feed'], items: ['a', 'b'] },
+  { protocol: 'conformer-stream-v1', kind: 'complete' },
+]`);
+
+    writeProtocolImpl(conformantDir, `[
+  { protocol: 'conformer-stream-v1', kind: 'initial', data: { hero: {}, feed: [] } },
+  { protocol: 'conformer-stream-v1', kind: 'patch', path: ['hero'], data: { name: 'wrong' } },
+  { protocol: 'conformer-stream-v1', kind: 'patch', path: ['feed'], items: ['a', 'c'] },
+  { protocol: 'conformer-stream-v1', kind: 'complete' },
+]`);
+
+    fs.writeFileSync(tmpConfigPath, JSON.stringify({
+      reference: 'ref',
+      impls: {
+        ref: {
+          path: refDir,
+          command: ['node', 'index.js'],
+        },
+        conformant: {
+          path: conformantDir,
+          command: ['node', 'index.js'],
+        },
+      },
+    }, null, 2));
+
+    const { cmd, args, opts } = runConformer({ CORPUS_DIR: corpusDir });
+    execFileSync(cmd, args, opts);
+
+    const failures = ResultsStore.fromDirectory(tmpResultsDir).getImplFailures('conformant');
+    assert.equal(failures.length, 1);
+    assert.deepStrictEqual(failures[0].expected, {
+      data: {
+        hero: { name: 'str' },
+        feed: ['a', 'b'],
+      },
+    });
+    assert.deepStrictEqual(failures[0].actual, {
+      data: {
+        hero: { name: 'wrong' },
+        feed: ['a', 'c'],
+      },
+    });
+  });
+
+  it('treats malformed streamed reference output as excluded and skips conformants', () => {
+    const corpusDir = path.join(tmpDir, 'corpus');
+    const refDir = path.join(tmpDir, 'ref-impl');
+    const conformantDir = path.join(tmpDir, 'conformant-impl');
+    const conformantLog = path.join(tmpDir, 'conformant.log');
+
+    writeCorpusCase(
+      corpusDir,
+      'streamed-test',
+      'streamed-query',
+      'type Query { hero: Hero } type Hero { name: String }',
+      '{ hero { name } }',
+    );
+
+    writeProtocolImpl(refDir, `[
+  { protocol: 'conformer-stream-v1', kind: 'initial', data: { hero: {} } },
+  { protocol: 'conformer-stream-v1', kind: 'patch', path: ['hero'], data: { name: 'str' } },
+]`);
+
+    writeNodeImpl(conformantDir, `'use strict';
+const fs = require('fs');
+fs.appendFileSync(${JSON.stringify(conformantLog)}, 'ran\\n');
+process.stdout.write(JSON.stringify({ data: { hero: { name: 'str' } } }));
+`);
+
+    fs.writeFileSync(tmpConfigPath, JSON.stringify({
+      reference: 'ref',
+      impls: {
+        ref: {
+          path: refDir,
+          command: ['node', 'index.js'],
+        },
+        conformant: {
+          path: conformantDir,
+          command: ['node', 'index.js'],
+        },
+      },
+    }, null, 2));
+
+    const { cmd, args, opts } = runConformer({ CORPUS_DIR: corpusDir });
+    execFileSync(cmd, args, opts);
+
+    const run = ResultsStore.fromDirectory(tmpResultsDir).loadLatestRunSummary();
+    assert.equal(run.reference.total, 0);
+    assert.equal(run.reference.excluded, 1);
+    assert.equal(run.reference.exclusions.length, 1);
+    assert.equal(run.reference.exclusions[0].error, 'invalid protocol output');
+    assert.ok(!fs.existsSync(conformantLog), 'conformant should not run for excluded streamed cases');
   });
 });

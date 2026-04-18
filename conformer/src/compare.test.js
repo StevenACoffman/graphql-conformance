@@ -166,6 +166,12 @@ describe('compareResults', () => {
     const b = { error: 'process exited with code 1' };
     assert.deepStrictEqual(compareResults(a, b), { matches: false });
   });
+
+  it('invalid protocol output is treated like other invalid harness output', () => {
+    const a = { error: 'invalid protocol output' };
+    const b = { error: 'invalid JSON output' };
+    assert.deepStrictEqual(compareResults(a, b), { matches: true });
+  });
 });
 
 describe('normalizeHarnessError', () => {
@@ -183,7 +189,14 @@ describe('normalizeHarnessError', () => {
   it('normalizes invalid JSON output', () => {
     assert.deepStrictEqual(
       normalizeHarnessError({ error: 'invalid JSON output' }),
-      { kind: 'invalid-json' },
+      { kind: 'invalid-output' },
+    );
+  });
+
+  it('normalizes invalid protocol output', () => {
+    assert.deepStrictEqual(
+      normalizeHarnessError({ error: 'invalid protocol output' }),
+      { kind: 'invalid-output' },
     );
   });
 });
