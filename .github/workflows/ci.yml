@@ -1,0 +1,106 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  smoke:
+    name: Smoke (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - macos-latest
+    env:
+      BUILD_CONCURRENCY: 2
+      SMOKE_CORPUS_DIR: ${{ github.workspace }}/.tmp/corpus-smoke
+      SMOKE_RESULTS_DIR: ${{ github.workspace }}/.tmp/ci-results
+      SMOKE_SITE_DATA_DIR: ${{ github.workspace }}/.tmp/site-data
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install Linux system dependencies
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            autoconf \
+            automake \
+            bison \
+            build-essential \
+            curl \
+            default-libmysqlclient-dev \
+            git \
+            libbz2-dev \
+            libcurl4-openssl-dev \
+            libffi-dev \
+            libfreetype6-dev \
+            libgd-dev \
+            libicu-dev \
+            libjpeg-dev \
+            libldap2-dev \
+            libldb-dev \
+            libncurses-dev \
+            libncursesw5-dev \
+            libonig-dev \
+            libpng-dev \
+            libpq-dev \
+            libreadline-dev \
+            libsqlite3-dev \
+            libssl-dev \
+            libtool \
+            libxml2-dev \
+            libxpm-dev \
+            libxslt-dev \
+            libyaml-dev \
+            libzip-dev \
+            pkg-config \
+            re2c \
+            zlib1g-dev
+
+      - name: Install macOS system dependencies
+        if: runner.os == 'macOS'
+        run: |
+          brew install bison
+          echo "$(brew --prefix bison)/bin" >> "$GITHUB_PATH"
+
+      - name: Set up mise
+        uses: jdx/mise-action@v4
+        with:
+          install: false
+          cache: true
+
+      - name: Install toolchains
+        run: |
+          mise trust --yes
+          mise install
+
+      - name: Run cross-platform smoke suite
+        run: make ci-smoke
+
+      - name: Upload smoke artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          if-no-files-found: ignore
+          name: smoke-${{ matrix.os }}
+          path: |
+            .tmp/ci-results
+            .tmp/site-data

@@ -8,7 +8,7 @@ const path = require('path');
 const rootDir = path.resolve(__dirname, '../..');
 
 function make(args, env) {
-  return spawnSync('make', ["-s", ...args], {
+  return spawnSync('make', ['-s', ...args], {
     cwd: rootDir,
     encoding: 'utf8',
     timeout: 30_000,

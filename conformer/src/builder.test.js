@@ -6,7 +6,13 @@ const fs = require('fs');
 const path = require('path');
 const os = require('os');
 const { execFileSync } = require('child_process');
-const { DEFAULT_BUILD_TIMEOUT_MS, getVersion, buildImpl, getBuildTimeoutMs } = require('./builder');
+const {
+  DEFAULT_BUILD_TIMEOUT_MS,
+  getVersion,
+  buildImpl,
+  getBuildConcurrency,
+  getBuildTimeoutMs,
+} = require('./builder');
 
 describe('getVersion', () => {
   let tmpDir;
@@ -142,5 +148,32 @@ describe('getBuildTimeoutMs', () => {
 
   it('uses the impl-specific timeout override when provided', () => {
     assert.equal(getBuildTimeoutMs({ buildTimeoutMs: 1234 }), 1234);
+  });
+});
+
+describe('getBuildConcurrency', () => {
+  const previous = process.env.BUILD_CONCURRENCY;
+
+  afterEach(() => {
+    if (previous === undefined) {
+      delete process.env.BUILD_CONCURRENCY;
+    } else {
+      process.env.BUILD_CONCURRENCY = previous;
+    }
+  });
+
+  it('defaults to the host CPU count when BUILD_CONCURRENCY is unset', () => {
+    delete process.env.BUILD_CONCURRENCY;
+    assert.equal(getBuildConcurrency(), os.cpus().length);
+  });
+
+  it('uses BUILD_CONCURRENCY when it is a positive integer', () => {
+    process.env.BUILD_CONCURRENCY = '2';
+    assert.equal(getBuildConcurrency(), 2);
+  });
+
+  it('ignores invalid BUILD_CONCURRENCY values', () => {
+    process.env.BUILD_CONCURRENCY = '0';
+    assert.equal(getBuildConcurrency(), os.cpus().length);
   });
 });

@@ -72,6 +72,7 @@ sudo apt install \
 ```sh
 make build          # clone libraries and build all implementations
 make test           # run all tests
+make ci-smoke       # cross-platform smoke target used by CI
 make run-conformer  # run conformance suite and update the dashboard
 make serve-site     # serve the dashboard locally
 ```

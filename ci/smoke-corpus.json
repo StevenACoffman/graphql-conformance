@@ -1,0 +1,23 @@
+{
+  "cases": [
+    {
+      "schemaId": "0",
+      "queryId": "0"
+    },
+    {
+      "schemaId": "0011ee4d",
+      "queryId": "19c90551",
+      "variablesId": "44136fa3"
+    },
+    {
+      "schemaId": "05885486",
+      "queryId": "724c48a6",
+      "variablesId": "44136fa3"
+    },
+    {
+      "schemaId": "05885486",
+      "queryId": "47cf62c3",
+      "variablesId": "73698ab4"
+    }
+  ]
+}

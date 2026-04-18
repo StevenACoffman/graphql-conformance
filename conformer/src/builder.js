@@ -16,6 +16,18 @@ function getBuildTimeoutMs(impl) {
   return impl.buildTimeoutMs ?? DEFAULT_BUILD_TIMEOUT_MS;
 }
 
+function getBuildConcurrency() {
+  const raw = process.env.BUILD_CONCURRENCY;
+  if (!raw) return os.cpus().length;
+
+  const parsed = Number.parseInt(raw, 10);
+  if (!Number.isInteger(parsed) || parsed < 1) {
+    return os.cpus().length;
+  }
+
+  return parsed;
+}
+
 async function buildImpl(impl, baseDir) {
   const implDir = path.resolve(baseDir, impl.path);
   const buildDir = path.join(implDir, 'build');
@@ -69,7 +81,7 @@ async function buildAll(config, baseDir) {
   const allImpls = Object.entries(config.impls).map(([name, impl]) => ({ name, ...impl }));
   const results = [];
   let i = 0;
-  const concurrency = os.cpus().length;
+  const concurrency = Math.min(getBuildConcurrency(), Math.max(allImpls.length, 1));
 
   async function next() {
     while (i < allImpls.length) {
@@ -91,4 +103,11 @@ function getVersion(implDir) {
   }
 }
 
-module.exports = { DEFAULT_BUILD_TIMEOUT_MS, buildImpl, buildAll, getBuildTimeoutMs, getVersion };
+module.exports = {
+  DEFAULT_BUILD_TIMEOUT_MS,
+  buildImpl,
+  buildAll,
+  getBuildConcurrency,
+  getBuildTimeoutMs,
+  getVersion,
+};
