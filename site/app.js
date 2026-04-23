@@ -4,6 +4,7 @@ const {
   escapeHtml,
   formatFailureCard: renderFailureCard,
   getFailureKey,
+  computeReferenceDisplay,
 } = window.GQLCRender;
 
 const app = document.getElementById('app');
@@ -90,22 +91,28 @@ function renderDashboard(summary) {
     .filter((item) => !item.isReference)
     .sort((a, b) => b.passPct - a.passPct || a.impl.localeCompare(b.impl));
 
+  const refDisplay = computeReferenceDisplay(reference);
+  const corpusTotal = refDisplay ? refDisplay.total : 0;
+  const excludedCount = refDisplay ? refDisplay.excluded : 0;
+
   app.innerHTML = `
     <h2>Conformance Summary</h2>
     <div class="dashboard-layout">
-      ${reference ? `
-        <section class="reference-card">
+      ${reference && refDisplay ? `
+        <section class="reference-card" data-impl="${encodeURIComponent(reference.impl)}" tabindex="0" role="link" aria-label="View ${escapeHtml(reference.impl)} details">
           <div class="reference-card-header">
             <span class="reference-pill">Reference</span>
             <a class="reference-link" href="#/impl/${reference.impl}">${reference.impl}</a>
           </div>
-          <div class="reference-rate">${reference.passPct}%</div>
-          <div class="reference-subtext">${reference.total} runnable · ${reference.excluded || 0} excluded</div>
+          <div class="reference-rate">${refDisplay.passPct}%</div>
+          <div class="reference-subtext">${refDisplay.total} total · ${refDisplay.failed} failed</div>
+          ${refDisplay.failed > 0 ? `
+            <div class="reference-note">Failed entries are excluded from conformance tests</div>
+          ` : ''}
           <div class="bar-container reference-bar">
-            <div class="bar-fill ${barClass(reference.passPct)}" style="width: ${reference.passPct}%"></div>
+            <div class="bar-fill ${barClass(refDisplay.passPct)}" style="width: ${refDisplay.passPct}%"></div>
           </div>
           <div class="reference-meta">
-            <div><span>Corpus</span><strong>${reference.corpusTotal ?? reference.total}</strong></div>
             <div><span>Version</span><strong class="mono">${renderVersion(reference)}</strong></div>
           </div>
         </section>
@@ -125,7 +132,7 @@ function renderDashboard(summary) {
                 <td><a href="#/impl/${s.impl}">${s.impl}</a></td>
                 <td class="pass-rate-cell">
                   <div class="pass-rate-value">${s.passPct}%</div>
-                  <div class="pass-rate-meta">${s.total} runnable · ${s.failed} failed</div>
+                  <div class="pass-rate-meta">${corpusTotal} total · ${excludedCount} excluded · ${s.failed} failed</div>
                   <div class="bar-container full-width-bar">
                     <div class="bar-fill ${barClass(s.passPct)}" style="width: ${s.passPct}%"></div>
                   </div>
@@ -147,38 +154,59 @@ function renderVersion(item) {
   return text;
 }
 
-function renderImplDetail(name, history, failures, summaryItem, exclusions = [], options = {}) {
+function renderImplDetail(name, history, failures, summaryItem, exclusions = [], referenceSummary = null, options = {}) {
   if (options.resetExpanded) expandedFailureKeys.clear();
-  currentDetailState = { name, history, failures, summaryItem, exclusions };
-  const hasChart = history.length > 1;
-  const latest = history.length > 0 ? history[history.length - 1] : null;
+  currentDetailState = { name, history, failures, summaryItem, exclusions, referenceSummary };
   const isReference = !!summaryItem?.isReference;
+
+  const displayHistory = isReference
+    ? history.map((entry) => {
+      const d = computeReferenceDisplay(entry);
+      if (!d) return entry;
+      return { ...entry, passPct: d.passPct, total: d.total, failed: d.failed };
+    })
+    : history;
+
+  const hasChart = displayHistory.length > 1;
+  const latest = displayHistory.length > 0 ? displayHistory[displayHistory.length - 1] : null;
+  const refDisplay = isReference ? computeReferenceDisplay(summaryItem) : null;
+
   const items = isReference ? exclusions : failures;
-  const heading = isReference ? 'Excluded Tests' : 'Failing Tests';
-  const emptyMessage = isReference ? 'No tests were excluded in the latest run.' : 'All runnable tests passing.';
-  const itemLabel = isReference ? 'exclusions' : 'failures';
+  const heading = 'Failing Tests';
+  const itemLabel = 'failures';
   const summaryRate = latest ? `${latest.passPct}%` : 'No data';
+
   const summarySubtext = latest
     ? (isReference
-      ? `${latest.total} runnable · ${latest.excluded || 0} excluded`
-      : `${latest.total} runnable · ${latest.failed} failed`)
+      ? `${refDisplay.total} total · ${refDisplay.failed} failed`
+      : (referenceSummary
+        ? `${referenceSummary.corpusTotal ?? latest.total} total · ${referenceSummary.excluded || 0} excluded · ${latest.failed} failed`
+        : `${latest.total} total · ${latest.failed} failed`))
     : 'No history available';
+
   const metaItems = latest
     ? (isReference
       ? [
         { label: 'Run', value: formatTimestamp(summaryItem?.lastRun) },
-        { label: 'Runnable', value: latest.total },
-        { label: 'Excluded', value: latest.excluded || 0 },
-        { label: 'Corpus', value: latest.corpusTotal ?? latest.total },
+        { label: 'Total', value: refDisplay.total },
+        { label: 'Failed', value: refDisplay.failed },
       ]
-      : [
-        { label: 'Run', value: formatTimestamp(summaryItem?.lastRun) },
-        { label: 'Runnable', value: latest.total },
-        { label: 'Failed', value: latest.failed },
-      ])
+      : (referenceSummary
+        ? [
+          { label: 'Run', value: formatTimestamp(summaryItem?.lastRun) },
+          { label: 'Total', value: referenceSummary.corpusTotal ?? latest.total },
+          { label: 'Excluded', value: referenceSummary.excluded || 0 },
+          { label: 'Failed', value: latest.failed },
+        ]
+        : [
+          { label: 'Run', value: formatTimestamp(summaryItem?.lastRun) },
+          { label: 'Total', value: latest.total },
+          { label: 'Failed', value: latest.failed },
+        ]))
     : [];
+
   const versionCell = renderVersion(summaryItem);
-  const detailsSection = !isReference && items.length === 0
+  const detailsSection = items.length === 0
     ? renderNoFailuresSection()
     : `
       <section class="detail-section-card">
@@ -186,16 +214,15 @@ function renderImplDetail(name, history, failures, summaryItem, exclusions = [],
           <h3>${heading}</h3>
           <p>${items.length} ${itemLabel} in the latest run.</p>
         </div>
-        ${items.length === 0
-          ? `<p class="empty">${emptyMessage}</p>`
-          : `
-            <div class="failure-list">
-              ${items.map((f) => formatFailureCard(f)).join('')}
-            </div>
-          `
-        }
+        <div class="failure-list">
+          ${items.map((f) => formatFailureCard(f)).join('')}
+        </div>
       </section>
     `;
+
+  const referenceNote = isReference && refDisplay && refDisplay.failed > 0
+    ? '<div class="reference-note">Failed entries are excluded from conformance tests</div>'
+    : '';
 
   app.innerHTML = `
     <div class="detail-page">
@@ -205,7 +232,6 @@ function renderImplDetail(name, history, failures, summaryItem, exclusions = [],
         <div class="detail-summary-header">
           <div>
             <h2>${name}${isReference ? ' <span class="reference-pill inline-pill">Reference</span>' : ''}</h2>
-            ${isReference ? '<p class="detail-subtitle">Reference implementation scored on runnable corpus cases.</p>' : ''}
           </div>
         </div>
 
@@ -213,6 +239,7 @@ function renderImplDetail(name, history, failures, summaryItem, exclusions = [],
           <div>
             <div class="detail-rate">${summaryRate}</div>
             <div class="detail-subtext">${summarySubtext}</div>
+            ${referenceNote}
           </div>
         </div>
 
@@ -252,7 +279,7 @@ function renderImplDetail(name, history, failures, summaryItem, exclusions = [],
     </div>
   `;
 
-  if (hasChart) drawChart(history);
+  if (hasChart) drawChart(displayHistory);
 }
 
 function rerenderCurrentDetail() {
@@ -263,6 +290,7 @@ function rerenderCurrentDetail() {
     currentDetailState.failures,
     currentDetailState.summaryItem,
     currentDetailState.exclusions,
+    currentDetailState.referenceSummary,
     { resetExpanded: false },
   );
 }
@@ -444,6 +472,7 @@ async function route() {
       const name = decodeURIComponent(hash.slice(7));
       const summary = await fetchJSON('data/summary.json');
       const summaryItem = summary.find((item) => item.impl === name) || null;
+      const referenceSummary = summary.find((item) => item.isReference) || null;
       const [history, failures, exclusions] = await Promise.all([
         fetchJSON(`data/impls/${name}/history.json`),
         fetchJSON(`data/impls/${name}/failures.json`),
@@ -451,7 +480,7 @@ async function route() {
           ? fetchJSON(`data/impls/${name}/exclusions.json`)
           : Promise.resolve([]),
       ]);
-      renderImplDetail(name, history, failures, summaryItem, exclusions, { resetExpanded: true });
+      renderImplDetail(name, history, failures, summaryItem, exclusions, referenceSummary, { resetExpanded: true });
     } else {
       currentDetailState = null;
       expandedFailureKeys.clear();
@@ -467,7 +496,6 @@ async function route() {
 app.addEventListener('click', (event) => {
   const target = getEventElement(event);
   if (!target) return;
-  if (!target.closest('.dashboard-row') && target.closest('a')) return;
 
   const copyButton = target.closest('.failure-card-copy');
   if (copyButton) {
@@ -476,14 +504,20 @@ app.addEventListener('click', (event) => {
     return;
   }
 
+  if (target.closest('a')) return;
+
+  const referenceCard = target.closest('.reference-card');
+  if (referenceCard && referenceCard.dataset.impl) {
+    location.hash = `#/impl/${decodeURIComponent(referenceCard.dataset.impl)}`;
+    return;
+  }
+
   const dashboardRow = target.closest('.dashboard-row');
   if (dashboardRow) {
-    if (target.closest('a')) return;
     location.hash = `#/impl/${decodeURIComponent(dashboardRow.dataset.impl)}`;
     return;
   }
 
-  if (target.closest('a')) return;
   const card = target.closest('.failure-card');
   if (!card || card.dataset.expandable !== 'true') return;
   if (!shouldToggleFailureCard(card, target)) return;
@@ -495,16 +529,22 @@ app.addEventListener('keydown', (event) => {
   if (!target) return;
   if (event.key !== 'Enter' && event.key !== ' ') return;
   if (target.closest('.failure-card-copy')) return;
+  if (target.closest('a')) return;
+
+  const referenceCard = target.closest('.reference-card');
+  if (referenceCard && referenceCard.dataset.impl) {
+    event.preventDefault();
+    location.hash = `#/impl/${decodeURIComponent(referenceCard.dataset.impl)}`;
+    return;
+  }
 
   const dashboardRow = target.closest('.dashboard-row');
   if (dashboardRow) {
-    if (target.closest('a')) return;
     event.preventDefault();
     location.hash = `#/impl/${decodeURIComponent(dashboardRow.dataset.impl)}`;
     return;
   }
 
-  if (target.closest('a')) return;
   const card = target.closest('.failure-card');
   if (!card || card.dataset.expandable !== 'true') return;
   event.preventDefault();
