@@ -20,124 +20,155 @@
     "juniper",
     "lacinia"
   ],
-  "testCaseCount": 553,
+  "excluded": 8,
   "resultsByImpl": {
     "graphql-js-17": {
       "implId": "graphql-js-17",
+      "total": 553,
+      "passed": 545,
       "failed": 0,
-      "excluded": 8,
       "errored": 0,
+      "falloutAfter": null,
       "results": []
     },
     "graphql-js-16": {
       "implId": "graphql-js-16",
+      "total": 545,
+      "passed": 463,
       "failed": 0,
-      "excluded": 0,
       "errored": 82,
+      "falloutAfter": null,
       "results": []
     },
     "grafast": {
       "implId": "grafast",
+      "total": 545,
+      "passed": 463,
       "failed": 0,
-      "excluded": 0,
       "errored": 82,
+      "falloutAfter": null,
       "results": []
     },
     "graphql-java": {
       "implId": "graphql-java",
+      "total": 545,
+      "passed": 545,
       "failed": 0,
-      "excluded": 0,
       "errored": 0,
+      "falloutAfter": null,
       "results": []
     },
     "viaduct": {
       "implId": "viaduct",
+      "total": 545,
+      "passed": 545,
       "failed": 0,
-      "excluded": 0,
       "errored": 0,
+      "falloutAfter": null,
       "results": []
     },
     "graphql-go": {
       "implId": "graphql-go",
+      "total": 545,
+      "passed": 481,
       "failed": 64,
-      "excluded": 0,
       "errored": 0,
+      "falloutAfter": null,
       "results": []
     },
     "graphql-php": {
       "implId": "graphql-php",
+      "total": 545,
+      "passed": 545,
       "failed": 0,
-      "excluded": 0,
       "errored": 0,
+      "falloutAfter": null,
       "results": []
     },
     "graphql-core": {
       "implId": "graphql-core",
+      "total": 545,
+      "passed": 463,
       "failed": 0,
-      "excluded": 0,
       "errored": 82,
+      "falloutAfter": null,
       "results": []
     },
     "graphql-ruby": {
       "implId": "graphql-ruby",
+      "total": 545,
+      "passed": 358,
       "failed": 148,
-      "excluded": 0,
       "errored": 39,
+      "falloutAfter": null,
       "results": []
     },
     "hot-chocolate": {
       "implId": "hot-chocolate",
+      "total": 545,
+      "passed": 521,
       "failed": 24,
-      "excluded": 0,
       "errored": 0,
+      "falloutAfter": null,
       "results": []
     },
     "graphql-dotnet": {
       "implId": "graphql-dotnet",
+      "total": 545,
+      "passed": 431,
       "failed": 21,
-      "excluded": 0,
       "errored": 93,
+      "falloutAfter": null,
       "results": []
     },
     "async-graphql": {
       "implId": "async-graphql",
+      "total": 545,
+      "passed": 185,
       "failed": 126,
-      "excluded": 0,
       "errored": 234,
+      "falloutAfter": null,
       "results": []
     },
     "absinthe": {
       "implId": "absinthe",
+      "total": 545,
+      "passed": 2,
       "failed": 0,
-      "excluded": 0,
       "errored": 543,
+      "falloutAfter": null,
       "results": []
     },
     "gqlgen": {
       "implId": "gqlgen",
+      "total": 545,
+      "passed": 545,
       "failed": 0,
-      "excluded": 0,
       "errored": 0,
+      "falloutAfter": null,
       "results": []
     },
     "juniper": {
       "implId": "juniper",
+      "total": 545,
+      "passed": 504,
       "failed": 41,
-      "excluded": 0,
       "errored": 0,
+      "falloutAfter": null,
       "results": []
     },
     "lacinia": {
       "implId": "lacinia",
+      "total": 545,
+      "passed": 20,
       "failed": 0,
-      "excluded": 0,
       "errored": 525,
+      "falloutAfter": null,
       "results": []
     }
   },
   "_conformerMeta": {
     "corpusFingerprint": "e62fc5705887e64d6475abc34e62f914875ccf1a44dd3dd56fcd325f12c7121d",
-    "scoringModel": "runnable-set-v1",
     "runnableCount": 545,
     "implMeta": {
       "graphql-js-17": {
