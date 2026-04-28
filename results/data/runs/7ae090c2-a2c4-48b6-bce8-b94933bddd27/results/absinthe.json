@@ -1,0 +1,152 @@
+[
+  {
+    "id": "fed93a6c-0ee9-4b38-8b3b-5e18b1297176",
+    "runId": "7ae090c2-a2c4-48b6-bce8-b94933bddd27",
+    "implId": "absinthe",
+    "testCaseId": "034907e7/08233559/724a47a1",
+    "status": "error",
+    "expected": {
+      "data": {
+        "__typename": "Object_jGekrLP4U",
+        "c5GCEDZ": "id",
+        "n_kMSMjl": "id"
+      }
+    },
+    "error": "`import_sdl` could not parse SDL:\nsyntax error before: ')' ([%{line: 13, column: 3}])",
+    "stderr": "{\"errors\":[{\"message\":\"`import_sdl` could not parse SDL:\\nsyntax error before: ')' ([%{line: 13, column: 3}])\"}]}"
+  },
+  {
+    "id": "b1646c9d-77fa-4b4f-804f-48d150cc6379",
+    "runId": "7ae090c2-a2c4-48b6-bce8-b94933bddd27",
+    "implId": "absinthe",
+    "testCaseId": "034907e7/09274984/e1d651ba",
+    "status": "error",
+    "expected": {
+      "data": {
+        "Uf": "Object_jGekrLP4U",
+        "__typename": "Object_jGekrLP4U",
+        "a": "id"
+      }
+    },
+    "error": "`import_sdl` could not parse SDL:\nsyntax error before: ')' ([%{line: 13, column: 3}])",
+    "stderr": "{\"errors\":[{\"message\":\"`import_sdl` could not parse SDL:\\nsyntax error before: ')' ([%{line: 13, column: 3}])\"}]}"
+  },
+  {
+    "id": "67cca7d9-aa4e-4d60-81a8-88e1ba407e76",
+    "runId": "7ae090c2-a2c4-48b6-bce8-b94933bddd27",
+    "implId": "absinthe",
+    "testCaseId": "034907e7/09274984/f00482f3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "Uf": "Object_jGekrLP4U",
+        "__typename": "Object_jGekrLP4U",
+        "a": "id"
+      }
+    },
+    "error": "`import_sdl` could not parse SDL:\nsyntax error before: ')' ([%{line: 13, column: 3}])",
+    "stderr": "{\"errors\":[{\"message\":\"`import_sdl` could not parse SDL:\\nsyntax error before: ')' ([%{line: 13, column: 3}])\"}]}"
+  },
+  {
+    "id": "ff7955e4-8a85-4fc9-8f0c-1327df303cf0",
+    "runId": "7ae090c2-a2c4-48b6-bce8-b94933bddd27",
+    "implId": "absinthe",
+    "testCaseId": "034907e7/4f583e2d/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "c5GCEDZ": "id"
+      }
+    },
+    "error": "`import_sdl` could not parse SDL:\nsyntax error before: ')' ([%{line: 13, column: 3}])",
+    "stderr": "{\"errors\":[{\"message\":\"`import_sdl` could not parse SDL:\\nsyntax error before: ')' ([%{line: 13, column: 3}])\"}]}"
+  },
+  {
+    "id": "0d5779aa-2e8a-4b2e-8b4c-65e54e20ef43",
+    "runId": "7ae090c2-a2c4-48b6-bce8-b94933bddd27",
+    "implId": "absinthe",
+    "testCaseId": "034907e7/5f421a36/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "lPfrwoN": "Object_jGekrLP4U"
+      }
+    },
+    "error": "`import_sdl` could not parse SDL:\nsyntax error before: ')' ([%{line: 13, column: 3}])",
+    "stderr": "{\"errors\":[{\"message\":\"`import_sdl` could not parse SDL:\\nsyntax error before: ')' ([%{line: 13, column: 3}])\"}]}"
+  },
+  {
+    "id": "ad3a4c08-4271-4624-86e3-af54c55edbbb",
+    "runId": "7ae090c2-a2c4-48b6-bce8-b94933bddd27",
+    "implId": "absinthe",
+    "testCaseId": "034907e7/7990cc4f/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "dQ6WtE34": true,
+        "__typename": "Object_jGekrLP4U"
+      }
+    },
+    "error": "`import_sdl` could not parse SDL:\nsyntax error before: ')' ([%{line: 13, column: 3}])",
+    "stderr": "{\"errors\":[{\"message\":\"`import_sdl` could not parse SDL:\\nsyntax error before: ')' ([%{line: 13, column: 3}])\"}]}"
+  },
+  {
+    "id": "8aa7b89d-76b9-4583-817f-864177b057e5",
+    "runId": "7ae090c2-a2c4-48b6-bce8-b94933bddd27",
+    "implId": "absinthe",
+    "testCaseId": "034907e7/93c616f0/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "__typename": "Object_jGekrLP4U",
+        "c5GCEDZ": "id"
+      }
+    },
+    "error": "`import_sdl` could not parse SDL:\nsyntax error before: ')' ([%{line: 13, column: 3}])",
+    "stderr": "{\"errors\":[{\"message\":\"`import_sdl` could not parse SDL:\\nsyntax error before: ')' ([%{line: 13, column: 3}])\"}]}"
+  },
+  {
+    "id": "1d1aadc9-bdc4-4c6b-8e5c-6da37957fc22",
+    "runId": "7ae090c2-a2c4-48b6-bce8-b94933bddd27",
+    "implId": "absinthe",
+    "testCaseId": "034907e7/caf52a10/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "c5GCEDZ": "id"
+      }
+    },
+    "error": "`import_sdl` could not parse SDL:\nsyntax error before: ')' ([%{line: 13, column: 3}])",
+    "stderr": "{\"errors\":[{\"message\":\"`import_sdl` could not parse SDL:\\nsyntax error before: ')' ([%{line: 13, column: 3}])\"}]}"
+  },
+  {
+    "id": "315d7d31-2c46-4084-8647-748507e0370f",
+    "runId": "7ae090c2-a2c4-48b6-bce8-b94933bddd27",
+    "implId": "absinthe",
+    "testCaseId": "034907e7/d42e84e4/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "c5GCEDZ": "id"
+      }
+    },
+    "error": "`import_sdl` could not parse SDL:\nsyntax error before: ')' ([%{line: 13, column: 3}])",
+    "stderr": "{\"errors\":[{\"message\":\"`import_sdl` could not parse SDL:\\nsyntax error before: ')' ([%{line: 13, column: 3}])\"}]}"
+  },
+  {
+    "id": "d1ed2c9f-a769-4aa6-8199-af0af0585906",
+    "runId": "7ae090c2-a2c4-48b6-bce8-b94933bddd27",
+    "implId": "absinthe",
+    "testCaseId": "034907e7/ea93ad2f/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "__typename": "Object_jGekrLP4U",
+        "L": "Object_jGekrLP4U",
+        "a": "id"
+      }
+    },
+    "error": "`import_sdl` could not parse SDL:\nsyntax error before: ')' ([%{line: 13, column: 3}])",
+    "stderr": "{\"errors\":[{\"message\":\"`import_sdl` could not parse SDL:\\nsyntax error before: ')' ([%{line: 13, column: 3}])\"}]}"
+  }
+]
