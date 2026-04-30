@@ -32,8 +32,8 @@
     "language": "unknown",
     "manifestUrl": "https://github.com/jbellenger/graphql-conformance/blob/master/impls/graphql-java/manifest.json",
     "repoUrl": "https://github.com/graphql-java/graphql-java",
-    "version": "25.0",
-    "versionUrl": "https://github.com/graphql-java/graphql-java/releases/tag/v25.0"
+    "version": "26.0",
+    "versionUrl": "https://github.com/graphql-java/graphql-java/releases/tag/v26.0"
   },
   {
     "id": "viaduct",
@@ -86,8 +86,8 @@
     "language": "unknown",
     "manifestUrl": "https://github.com/jbellenger/graphql-conformance/blob/master/impls/hot-chocolate/manifest.json",
     "repoUrl": "https://github.com/ChilliCream/graphql-platform",
-    "version": "15.1.15",
-    "versionUrl": "https://github.com/ChilliCream/graphql-platform/releases/tag/15.1.15"
+    "version": "15.1.16",
+    "versionUrl": "https://github.com/ChilliCream/graphql-platform/releases/tag/15.1.16"
   },
   {
     "id": "graphql-dotnet",
