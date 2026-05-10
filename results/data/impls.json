@@ -113,8 +113,8 @@
     "language": "unknown",
     "manifestUrl": "https://github.com/jbellenger/graphql-conformance/blob/master/impls/absinthe/manifest.json",
     "repoUrl": "https://github.com/absinthe-graphql/absinthe",
-    "version": "1.10.0",
-    "versionUrl": "https://github.com/absinthe-graphql/absinthe/releases/tag/v1.10.0"
+    "version": "1.10.2",
+    "versionUrl": "https://github.com/absinthe-graphql/absinthe/releases/tag/v1.10.2"
   },
   {
     "id": "gqlgen",

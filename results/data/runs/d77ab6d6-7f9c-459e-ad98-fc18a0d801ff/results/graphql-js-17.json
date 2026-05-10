@@ -1,0 +1,542 @@
+[
+  {
+    "id": "13f437c2-d8c5-45e8-8804-867a547761fb",
+    "runId": "d77ab6d6-7f9c-459e-ad98-fc18a0d801ff",
+    "implId": "graphql-js-17",
+    "testCaseId": "16b4f4d2/68ac87dd/08c2bc4a",
+    "status": "excluded",
+    "actual": {
+      "errors": [
+        {
+          "message": "Argument \"@defer(label:)\" must be a static string.",
+          "locations": [
+            {
+              "line": 12,
+              "column": 17
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "284da801-0471-476c-80de-a144afabed76",
+    "runId": "d77ab6d6-7f9c-459e-ad98-fc18a0d801ff",
+    "implId": "graphql-js-17",
+    "testCaseId": "19ab1352/a43fc162/44136fa3",
+    "status": "excluded",
+    "actual": {
+      "errors": [
+        {
+          "message": "Argument \"@defer(label:)\" must be a static string.",
+          "locations": [
+            {
+              "line": 8,
+              "column": 23
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "58cc34fe-8355-4a0c-8adb-24d6a0fc4290",
+    "runId": "d77ab6d6-7f9c-459e-ad98-fc18a0d801ff",
+    "implId": "graphql-js-17",
+    "testCaseId": "1a83f1c3/d0cee1b5/69eedd1b",
+    "status": "excluded",
+    "actual": {
+      "errors": [
+        {
+          "message": "Argument \"@defer(label:)\" must be a static string.",
+          "locations": [
+            {
+              "line": 24,
+              "column": 25
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "3a66ed93-d119-4e14-8bb3-1b52929dff90",
+    "runId": "d77ab6d6-7f9c-459e-ad98-fc18a0d801ff",
+    "implId": "graphql-js-17",
+    "testCaseId": "1a83f1c3/d0cee1b5/7f8046f0",
+    "status": "excluded",
+    "actual": {
+      "errors": [
+        {
+          "message": "Argument \"@defer(label:)\" must be a static string.",
+          "locations": [
+            {
+              "line": 24,
+              "column": 25
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "42c9b086-efff-4a67-88bb-fe76bcd82336",
+    "runId": "d77ab6d6-7f9c-459e-ad98-fc18a0d801ff",
+    "implId": "graphql-js-17",
+    "testCaseId": "1a83f1c3/d0cee1b5/cdcee300",
+    "status": "excluded",
+    "actual": {
+      "errors": [
+        {
+          "message": "Argument \"@defer(label:)\" must be a static string.",
+          "locations": [
+            {
+              "line": 24,
+              "column": 25
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "e75d0bb5-0b3e-43e2-845c-ddf33b797f42",
+    "runId": "d77ab6d6-7f9c-459e-ad98-fc18a0d801ff",
+    "implId": "graphql-js-17",
+    "testCaseId": "1be52ade/ed674df3/44136fa3",
+    "status": "excluded",
+    "actual": {
+      "errors": [
+        {
+          "message": "Argument \"@defer(label:)\" must be a static string.",
+          "locations": [
+            {
+              "line": 7,
+              "column": 25
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "3501175f-5f38-4350-807d-f0545b6c35b3",
+    "runId": "d77ab6d6-7f9c-459e-ad98-fc18a0d801ff",
+    "implId": "graphql-js-17",
+    "testCaseId": "3369ca5b/ca3604cb/3bf58b42",
+    "status": "excluded",
+    "actual": {
+      "errors": [
+        {
+          "message": "Argument \"@defer(label:)\" must be a static string.",
+          "locations": [
+            {
+              "line": 2,
+              "column": 17
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "ccefc6ea-5d85-4671-8dcc-5df8f6a81d22",
+    "runId": "d77ab6d6-7f9c-459e-ad98-fc18a0d801ff",
+    "implId": "graphql-js-17",
+    "testCaseId": "3369ca5b/ca3604cb/5227c73d",
+    "status": "excluded",
+    "actual": {
+      "errors": [
+        {
+          "message": "Argument \"@defer(label:)\" must be a static string.",
+          "locations": [
+            {
+              "line": 2,
+              "column": 17
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "cf84addc-2b50-427c-8f52-56b974540a05",
+    "runId": "d77ab6d6-7f9c-459e-ad98-fc18a0d801ff",
+    "implId": "graphql-js-17",
+    "testCaseId": "3cc3d70d/b4bcdb5a/04cfbeda",
+    "status": "excluded",
+    "actual": {
+      "errors": [
+        {
+          "message": "Argument \"@defer(label:)\" must be a static string.",
+          "locations": [
+            {
+              "line": 4,
+              "column": 18
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "379ee527-1364-4794-8fe8-0e2f7fa4e10a",
+    "runId": "d77ab6d6-7f9c-459e-ad98-fc18a0d801ff",
+    "implId": "graphql-js-17",
+    "testCaseId": "3cc3d70d/b4bcdb5a/112d23e5",
+    "status": "excluded",
+    "actual": {
+      "errors": [
+        {
+          "message": "Argument \"@defer(label:)\" must be a static string.",
+          "locations": [
+            {
+              "line": 4,
+              "column": 18
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "a4235749-b208-48fb-8608-5c37fbd451d4",
+    "runId": "d77ab6d6-7f9c-459e-ad98-fc18a0d801ff",
+    "implId": "graphql-js-17",
+    "testCaseId": "3cc3d70d/b4bcdb5a/b62235c6",
+    "status": "excluded",
+    "actual": {
+      "errors": [
+        {
+          "message": "Argument \"@defer(label:)\" must be a static string.",
+          "locations": [
+            {
+              "line": 4,
+              "column": 18
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "8a927e28-1b82-4054-8081-299ae3ff2d23",
+    "runId": "d77ab6d6-7f9c-459e-ad98-fc18a0d801ff",
+    "implId": "graphql-js-17",
+    "testCaseId": "4e835cbb/e0018f47/44136fa3",
+    "status": "excluded",
+    "actual": {
+      "errors": [
+        {
+          "message": "Argument \"@defer(label:)\" must be a static string.",
+          "locations": [
+            {
+              "line": 3,
+              "column": 21
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "c4860836-405e-4a1a-835f-fcb4188daeec",
+    "runId": "d77ab6d6-7f9c-459e-ad98-fc18a0d801ff",
+    "implId": "graphql-js-17",
+    "testCaseId": "5710d820/11c2ac02/44136fa3",
+    "status": "excluded",
+    "actual": {
+      "errors": [
+        {
+          "message": "Argument \"@defer(label:)\" must be a static string.",
+          "locations": [
+            {
+              "line": 12,
+              "column": 11
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "a06fd745-5e91-4ef9-83b3-dc5490474b42",
+    "runId": "d77ab6d6-7f9c-459e-ad98-fc18a0d801ff",
+    "implId": "graphql-js-17",
+    "testCaseId": "587ef7ad/3f6a8118/44136fa3",
+    "status": "excluded",
+    "actual": {
+      "errors": [
+        {
+          "message": "Argument \"@defer(label:)\" must be a static string.",
+          "locations": [
+            {
+              "line": 2,
+              "column": 25
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "abdbad63-6b3e-46ef-837f-c00d1d85f139",
+    "runId": "d77ab6d6-7f9c-459e-ad98-fc18a0d801ff",
+    "implId": "graphql-js-17",
+    "testCaseId": "5e72c907/924e8cb6/44136fa3",
+    "status": "excluded",
+    "actual": {
+      "errors": [
+        {
+          "message": "Argument \"@defer(label:)\" must be a static string.",
+          "locations": [
+            {
+              "line": 2,
+              "column": 18
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "44b553fe-acbf-4ff2-89ed-2893018f00ff",
+    "runId": "d77ab6d6-7f9c-459e-ad98-fc18a0d801ff",
+    "implId": "graphql-js-17",
+    "testCaseId": "80686ec8/29a40579/44136fa3",
+    "status": "excluded",
+    "actual": {
+      "errors": [
+        {
+          "message": "Argument \"@defer(label:)\" must be a static string.",
+          "locations": [
+            {
+              "line": 2,
+              "column": 18
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "39299984-3ec3-43e3-8c9f-204bb7ba6098",
+    "runId": "d77ab6d6-7f9c-459e-ad98-fc18a0d801ff",
+    "implId": "graphql-js-17",
+    "testCaseId": "9124ab4a/a0990ef4/2152b087",
+    "status": "excluded",
+    "actual": {
+      "errors": [
+        {
+          "message": "Argument \"@defer(label:)\" must be a static string.",
+          "locations": [
+            {
+              "line": 26,
+              "column": 26
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "b9e028fe-ba5b-469a-8884-821f53e1b5ab",
+    "runId": "d77ab6d6-7f9c-459e-ad98-fc18a0d801ff",
+    "implId": "graphql-js-17",
+    "testCaseId": "9124ab4a/a0990ef4/2dc64806",
+    "status": "excluded",
+    "actual": {
+      "errors": [
+        {
+          "message": "Argument \"@defer(label:)\" must be a static string.",
+          "locations": [
+            {
+              "line": 26,
+              "column": 26
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "d1f01270-6e25-41cf-8b33-c09e32ce62b9",
+    "runId": "d77ab6d6-7f9c-459e-ad98-fc18a0d801ff",
+    "implId": "graphql-js-17",
+    "testCaseId": "9124ab4a/a0990ef4/f9049b6e",
+    "status": "excluded",
+    "actual": {
+      "errors": [
+        {
+          "message": "Argument \"@defer(label:)\" must be a static string.",
+          "locations": [
+            {
+              "line": 26,
+              "column": 26
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "1f973d76-7172-4a4b-85a0-838499756a71",
+    "runId": "d77ab6d6-7f9c-459e-ad98-fc18a0d801ff",
+    "implId": "graphql-js-17",
+    "testCaseId": "9c43f4e7/fc0a4ccc/44136fa3",
+    "status": "excluded",
+    "actual": {
+      "errors": [
+        {
+          "message": "Argument \"@defer(label:)\" must be a static string.",
+          "locations": [
+            {
+              "line": 12,
+              "column": 26
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "3d5178a3-784a-4561-8d1f-d855107dad86",
+    "runId": "d77ab6d6-7f9c-459e-ad98-fc18a0d801ff",
+    "implId": "graphql-js-17",
+    "testCaseId": "ae2526a7/568c22da/44136fa3",
+    "status": "excluded",
+    "actual": {
+      "errors": [
+        {
+          "message": "Argument \"@defer(label:)\" must be a static string.",
+          "locations": [
+            {
+              "line": 3,
+              "column": 28
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "5b34102b-e7e5-4d51-8016-caa29bf3df17",
+    "runId": "d77ab6d6-7f9c-459e-ad98-fc18a0d801ff",
+    "implId": "graphql-js-17",
+    "testCaseId": "b6577cd2/49349201/53bee2d0",
+    "status": "excluded",
+    "actual": {
+      "errors": [
+        {
+          "message": "Argument \"@defer(label:)\" must be a static string.",
+          "locations": [
+            {
+              "line": 3,
+              "column": 19
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "724bdbb5-dcbd-41fc-83ae-4c74a2e23704",
+    "runId": "d77ab6d6-7f9c-459e-ad98-fc18a0d801ff",
+    "implId": "graphql-js-17",
+    "testCaseId": "b6577cd2/49349201/7f67f1df",
+    "status": "excluded",
+    "actual": {
+      "errors": [
+        {
+          "message": "Argument \"@defer(label:)\" must be a static string.",
+          "locations": [
+            {
+              "line": 3,
+              "column": 19
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "acf185b3-fc9b-4013-818a-7c639fbb276d",
+    "runId": "d77ab6d6-7f9c-459e-ad98-fc18a0d801ff",
+    "implId": "graphql-js-17",
+    "testCaseId": "c5ea3d3d/c9ad0e1f/44136fa3",
+    "status": "excluded",
+    "actual": {
+      "errors": [
+        {
+          "message": "Argument \"@defer(label:)\" must be a static string.",
+          "locations": [
+            {
+              "line": 11,
+              "column": 28
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "d352443b-04e7-4e33-8ae4-698dba25f91f",
+    "runId": "d77ab6d6-7f9c-459e-ad98-fc18a0d801ff",
+    "implId": "graphql-js-17",
+    "testCaseId": "e0b58892/f6bb3c42/17f9a949",
+    "status": "excluded",
+    "actual": {
+      "errors": [
+        {
+          "message": "Argument \"@defer(label:)\" must be a static string.",
+          "locations": [
+            {
+              "line": 6,
+              "column": 18
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "650f1035-7e38-492e-89c9-9ccef0c78805",
+    "runId": "d77ab6d6-7f9c-459e-ad98-fc18a0d801ff",
+    "implId": "graphql-js-17",
+    "testCaseId": "e0b58892/f6bb3c42/44136fa3",
+    "status": "excluded",
+    "actual": {
+      "errors": [
+        {
+          "message": "Argument \"@defer(label:)\" must be a static string.",
+          "locations": [
+            {
+              "line": 6,
+              "column": 18
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "846b49c5-e4a3-448d-8c78-a95840011240",
+    "runId": "d77ab6d6-7f9c-459e-ad98-fc18a0d801ff",
+    "implId": "graphql-js-17",
+    "testCaseId": "e0b58892/f6bb3c42/c6bb98b0",
+    "status": "excluded",
+    "actual": {
+      "errors": [
+        {
+          "message": "Argument \"@defer(label:)\" must be a static string.",
+          "locations": [
+            {
+              "line": 6,
+              "column": 18
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
