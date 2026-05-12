@@ -1,0 +1,122 @@
+[
+  {
+    "id": "4ba6b5a7-4148-4928-8579-1e6fca77028e",
+    "runId": "9c9f5cf8-ed85-4465-b7e3-aa837266a9ef",
+    "implId": "hot-chocolate",
+    "testCaseId": "e62a5c27/2ceaf113/251b236b",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "__typename": "Object_faFnLw",
+        "eFtFc": {
+          "yx": "gPEOxXy4Tc",
+          "is7KOaahxo": {
+            "w2OFqN9": {
+              "yU": "str"
+            },
+            "eFtFc": {
+              "is7KOaahxo": {
+                "__typename": "Object_faFnLw"
+              }
+            },
+            "rpDS1GQT9": {
+              "unB61Ui64": "dF"
+            }
+          },
+          "yU": "str",
+          "BZvgpXrQA": "id",
+          "dn84": "id",
+          "__typename": "Interface_avp_STUB"
+        }
+      }
+    },
+    "actual": {
+      "data": null,
+      "errors": [
+        {
+          "message": "The specified value type of variable `xh` does not match the variable type."
+        }
+      ]
+    }
+  },
+  {
+    "id": "2250a0c3-fb51-4b08-84a1-9d53b8228fb8",
+    "runId": "9c9f5cf8-ed85-4465-b7e3-aa837266a9ef",
+    "implId": "hot-chocolate",
+    "testCaseId": "e62a5c27/2ceaf113/85996ca0",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "__typename": "Object_faFnLw",
+        "eFtFc": {
+          "yx": "gPEOxXy4Tc",
+          "is7KOaahxo": {
+            "w2OFqN9": {
+              "yU": "str"
+            },
+            "eFtFc": {
+              "is7KOaahxo": {
+                "__typename": "Object_faFnLw"
+              }
+            },
+            "rpDS1GQT9": {
+              "unB61Ui64": "dF"
+            }
+          },
+          "yU": "str",
+          "BZvgpXrQA": "id",
+          "dn84": "id",
+          "__typename": "Interface_avp_STUB"
+        }
+      }
+    },
+    "actual": {
+      "data": null,
+      "errors": [
+        {
+          "message": "The specified value type of variable `xh` does not match the variable type."
+        }
+      ]
+    }
+  },
+  {
+    "id": "b6456205-1600-40f8-853d-4be9b8c93420",
+    "runId": "9c9f5cf8-ed85-4465-b7e3-aa837266a9ef",
+    "implId": "hot-chocolate",
+    "testCaseId": "e62a5c27/2ceaf113/de1b6f5e",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "__typename": "Object_faFnLw",
+        "eFtFc": {
+          "yx": "gPEOxXy4Tc",
+          "is7KOaahxo": {
+            "w2OFqN9": {
+              "yU": "str"
+            },
+            "eFtFc": {
+              "is7KOaahxo": {
+                "__typename": "Object_faFnLw"
+              }
+            },
+            "rpDS1GQT9": {
+              "unB61Ui64": "dF"
+            }
+          },
+          "yU": "str",
+          "BZvgpXrQA": "id",
+          "dn84": "id",
+          "__typename": "Interface_avp_STUB"
+        }
+      }
+    },
+    "actual": {
+      "data": null,
+      "errors": [
+        {
+          "message": "The specified value type of variable `xh` does not match the variable type."
+        }
+      ]
+    }
+  }
+]

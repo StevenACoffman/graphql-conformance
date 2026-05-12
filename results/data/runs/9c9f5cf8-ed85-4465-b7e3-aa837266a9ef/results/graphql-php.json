@@ -1,0 +1,233 @@
+[
+  {
+    "id": "e913b197-4b5d-4c6f-8a73-7122e2984616",
+    "runId": "9c9f5cf8-ed85-4465-b7e3-aa837266a9ef",
+    "implId": "graphql-php",
+    "testCaseId": "2f664669/e60121f9/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "qm8r7zFF": "id",
+        "__typename": "Object_Zzcj4Q",
+        "wqvUx": "Object_Zzcj4Q",
+        "T": "Object_Zzcj4Q"
+      }
+    },
+    "error": "driver fatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) at /app/vendor/webonyx/graphql-php/src/Language/AST/NodeList.php:92",
+    "stderr": "{\"errors\":[{\"message\":\"driver fatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) at \\/app\\/vendor\\/webonyx\\/graphql-php\\/src\\/Language\\/AST\\/NodeList.php:92\"}]}"
+  },
+  {
+    "id": "f266c5f4-1422-4376-8838-3e0d3cbc255e",
+    "runId": "9c9f5cf8-ed85-4465-b7e3-aa837266a9ef",
+    "implId": "graphql-php",
+    "testCaseId": "2f664669/ffb68dac/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "__typename": "Object_Zzcj4Q"
+      }
+    },
+    "error": "driver fatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) at /app/vendor/webonyx/graphql-php/src/Language/AST/NodeList.php:92",
+    "stderr": "{\"errors\":[{\"message\":\"driver fatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) at \\/app\\/vendor\\/webonyx\\/graphql-php\\/src\\/Language\\/AST\\/NodeList.php:92\"}]}"
+  },
+  {
+    "id": "a677c0c2-ae27-45a8-86e9-82c63e3d8cc6",
+    "runId": "9c9f5cf8-ed85-4465-b7e3-aa837266a9ef",
+    "implId": "graphql-php",
+    "testCaseId": "9159bc79/269ebed1/25ab6270",
+    "status": "error",
+    "expected": {
+      "data": {
+        "__typename": "Object_KvDafoT",
+        "tdHBNiP_z": "Object_KvDafoT",
+        "tO2mya28oJ": {
+          "__typename": "Interface_dG_STUB"
+        },
+        "VfPk_k": {
+          "__typename": "Interface_dG_STUB",
+          "ap5": {
+            "nQ374FWIrH": 2,
+            "__typename": "Interface_dG_STUB"
+          },
+          "d": 2,
+          "kiKRi9": "ek8Y",
+          "gwQNK": 2
+        },
+        "kW5v5": {}
+      }
+    },
+    "error": "driver fatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) at /app/vendor/webonyx/graphql-php/src/Utils/ASTDefinitionBuilder.php:151",
+    "stderr": "{\"errors\":[{\"message\":\"driver fatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) at \\/app\\/vendor\\/webonyx\\/graphql-php\\/src\\/Utils\\/ASTDefinitionBuilder.php:151\"}]}"
+  },
+  {
+    "id": "9512f702-c8d2-47d9-8c63-94202cd3d414",
+    "runId": "9c9f5cf8-ed85-4465-b7e3-aa837266a9ef",
+    "implId": "graphql-php",
+    "testCaseId": "9159bc79/269ebed1/4300a023",
+    "status": "error",
+    "expected": {
+      "data": {
+        "__typename": "Object_KvDafoT",
+        "tdHBNiP_z": "Object_KvDafoT",
+        "tO2mya28oJ": {
+          "__typename": "Interface_dG_STUB"
+        },
+        "VfPk_k": {
+          "__typename": "Interface_dG_STUB",
+          "ap5": {
+            "nQ374FWIrH": 2,
+            "__typename": "Interface_dG_STUB"
+          },
+          "kiKRi9": "ek8Y",
+          "gwQNK": 2
+        },
+        "kW5v5": {}
+      }
+    },
+    "error": "driver fatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) at /app/vendor/webonyx/graphql-php/src/Utils/ASTDefinitionBuilder.php:151",
+    "stderr": "{\"errors\":[{\"message\":\"driver fatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) at \\/app\\/vendor\\/webonyx\\/graphql-php\\/src\\/Utils\\/ASTDefinitionBuilder.php:151\"}]}"
+  },
+  {
+    "id": "de6caaba-81cf-4f2f-87ab-bf2c4ecb31d2",
+    "runId": "9c9f5cf8-ed85-4465-b7e3-aa837266a9ef",
+    "implId": "graphql-php",
+    "testCaseId": "9159bc79/269ebed1/69046879",
+    "status": "error",
+    "expected": {
+      "data": {
+        "__typename": "Object_KvDafoT",
+        "tdHBNiP_z": "Object_KvDafoT",
+        "tO2mya28oJ": {
+          "__typename": "Interface_dG_STUB"
+        },
+        "VfPk_k": {
+          "__typename": "Interface_dG_STUB",
+          "ap5": {
+            "nQ374FWIrH": 2,
+            "__typename": "Interface_dG_STUB"
+          },
+          "kiKRi9": "ek8Y",
+          "gwQNK": 2
+        },
+        "kW5v5": {}
+      }
+    },
+    "error": "driver fatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) at /app/vendor/webonyx/graphql-php/src/Utils/ASTDefinitionBuilder.php:151",
+    "stderr": "{\"errors\":[{\"message\":\"driver fatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) at \\/app\\/vendor\\/webonyx\\/graphql-php\\/src\\/Utils\\/ASTDefinitionBuilder.php:151\"}]}"
+  },
+  {
+    "id": "5e7267d6-4978-46ad-80c5-5a9eced0d246",
+    "runId": "9c9f5cf8-ed85-4465-b7e3-aa837266a9ef",
+    "implId": "graphql-php",
+    "testCaseId": "9159bc79/3814088a/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "__typename": "Object_KvDafoT",
+        "ZmBBHIkm": "Object_KvDafoT"
+      }
+    },
+    "error": "driver fatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) at /app/vendor/webonyx/graphql-php/src/Utils/AST.php:399",
+    "stderr": "{\"errors\":[{\"message\":\"driver fatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) at \\/app\\/vendor\\/webonyx\\/graphql-php\\/src\\/Utils\\/AST.php:399\"}]}"
+  },
+  {
+    "id": "273817e4-d7da-4f86-8c9b-424caf741b06",
+    "runId": "9c9f5cf8-ed85-4465-b7e3-aa837266a9ef",
+    "implId": "graphql-php",
+    "testCaseId": "9159bc79/9981e5fb/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "V1TjObxYwP": {
+          "t": {
+            "__typename": "Object_KvDafoT"
+          },
+          "j": "Object_eSlva"
+        },
+        "n4Bd7epXbW": {
+          "o8Ztpvq": "Object_KvDafoT",
+          "__typename": "Object_KvDafoT"
+        },
+        "o8Ztpvq": "Object_KvDafoT",
+        "__typename": "Object_KvDafoT"
+      }
+    },
+    "error": "driver fatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 4096 bytes) at /app/vendor/webonyx/graphql-php/src/Language/AST/NodeList.php:92",
+    "stderr": "{\"errors\":[{\"message\":\"driver fatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 4096 bytes) at \\/app\\/vendor\\/webonyx\\/graphql-php\\/src\\/Language\\/AST\\/NodeList.php:92\"}]}"
+  },
+  {
+    "id": "af8dcfdc-18bb-43b5-8f94-7ab24b6eebcd",
+    "runId": "9c9f5cf8-ed85-4465-b7e3-aa837266a9ef",
+    "implId": "graphql-php",
+    "testCaseId": "9159bc79/9c09fc28/381a9c51",
+    "status": "error",
+    "expected": {
+      "data": {
+        "p": {
+          "JpdVUFE": "Object_eSlva",
+          "z": {
+            "__typename": "Object_Vbw6rtT"
+          },
+          "HmHp": {
+            "__typename": "Object_Vbw6rtT"
+          },
+          "__typename": "Object_eSlva"
+        },
+        "__typename": "Object_KvDafoT",
+        "IYdY": "Object_KvDafoT"
+      }
+    },
+    "error": "driver fatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 4096 bytes) at /app/vendor/webonyx/graphql-php/src/Utils/ASTDefinitionBuilder.php:183",
+    "stderr": "{\"errors\":[{\"message\":\"driver fatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 4096 bytes) at \\/app\\/vendor\\/webonyx\\/graphql-php\\/src\\/Utils\\/ASTDefinitionBuilder.php:183\"}]}"
+  },
+  {
+    "id": "24beed63-fee2-4087-81c4-052e968742b4",
+    "runId": "9c9f5cf8-ed85-4465-b7e3-aa837266a9ef",
+    "implId": "graphql-php",
+    "testCaseId": "9159bc79/9c09fc28/88e1201f",
+    "status": "error",
+    "expected": {
+      "data": {
+        "p": {
+          "JpdVUFE": "Object_eSlva",
+          "z": {
+            "__typename": "Object_Vbw6rtT"
+          },
+          "HmHp": {
+            "__typename": "Object_Vbw6rtT"
+          },
+          "__typename": "Object_eSlva"
+        },
+        "__typename": "Object_KvDafoT",
+        "IYdY": "Object_KvDafoT"
+      }
+    },
+    "error": "driver fatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 4096 bytes) at /app/vendor/webonyx/graphql-php/src/Utils/ASTDefinitionBuilder.php:183",
+    "stderr": "{\"errors\":[{\"message\":\"driver fatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 4096 bytes) at \\/app\\/vendor\\/webonyx\\/graphql-php\\/src\\/Utils\\/ASTDefinitionBuilder.php:183\"}]}"
+  },
+  {
+    "id": "86512584-c818-424a-8fb6-758547a04f30",
+    "runId": "9c9f5cf8-ed85-4465-b7e3-aa837266a9ef",
+    "implId": "graphql-php",
+    "testCaseId": "9159bc79/9c09fc28/8d37bb51",
+    "status": "error",
+    "expected": {
+      "data": {
+        "p": {
+          "JpdVUFE": "Object_eSlva",
+          "z": {
+            "__typename": "Object_Vbw6rtT"
+          },
+          "HmHp": {
+            "__typename": "Object_Vbw6rtT"
+          },
+          "__typename": "Object_eSlva"
+        },
+        "__typename": "Object_KvDafoT",
+        "IYdY": "Object_KvDafoT"
+      }
+    },
+    "error": "driver fatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 4096 bytes) at /app/vendor/webonyx/graphql-php/src/Utils/ASTDefinitionBuilder.php:183",
+    "stderr": "{\"errors\":[{\"message\":\"driver fatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 4096 bytes) at \\/app\\/vendor\\/webonyx\\/graphql-php\\/src\\/Utils\\/ASTDefinitionBuilder.php:183\"}]}"
+  }
+]
