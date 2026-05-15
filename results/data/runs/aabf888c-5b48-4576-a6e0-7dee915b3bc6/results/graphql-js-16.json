@@ -1,0 +1,156 @@
+[
+  {
+    "id": "fa34ce19-26cf-46ab-8f99-b90362a4a0a8",
+    "runId": "aabf888c-5b48-4576-a6e0-7dee915b3bc6",
+    "implId": "graphql-js-16",
+    "testCaseId": "0be3846f/0f576f46/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "zXM2we": "G4F"
+      }
+    },
+    "error": "Maximum call stack size exceeded",
+    "stderr": "{\"errors\":[{\"message\":\"Maximum call stack size exceeded\"}]}"
+  },
+  {
+    "id": "110b68ea-aae9-454e-8adf-2eeef085218d",
+    "runId": "aabf888c-5b48-4576-a6e0-7dee915b3bc6",
+    "implId": "graphql-js-16",
+    "testCaseId": "0be3846f/223670b1/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "__typename": "Object_ApwfNHZGC",
+        "u56DFHI": "Object_ApwfNHZGC",
+        "i2nfXIp": "Object_ApwfNHZGC",
+        "FN": "Object_ApwfNHZGC"
+      }
+    },
+    "error": "Maximum call stack size exceeded",
+    "stderr": "{\"errors\":[{\"message\":\"Maximum call stack size exceeded\"}]}"
+  },
+  {
+    "id": "136ca632-03a5-4f26-8f58-117a35a6d70b",
+    "runId": "aabf888c-5b48-4576-a6e0-7dee915b3bc6",
+    "implId": "graphql-js-16",
+    "testCaseId": "0be3846f/3acc2aab/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "__typename": "Object_ApwfNHZGC",
+        "q1Kf4Syb": "Object_ApwfNHZGC"
+      }
+    },
+    "error": "Maximum call stack size exceeded",
+    "stderr": "{\"errors\":[{\"message\":\"Maximum call stack size exceeded\"}]}"
+  },
+  {
+    "id": "fda419d2-3775-4ab3-8264-93b4c0e6d94e",
+    "runId": "aabf888c-5b48-4576-a6e0-7dee915b3bc6",
+    "implId": "graphql-js-16",
+    "testCaseId": "0be3846f/5970534b/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "xIsC0SG": "Object_ApwfNHZGC"
+      }
+    },
+    "error": "Maximum call stack size exceeded",
+    "stderr": "{\"errors\":[{\"message\":\"Maximum call stack size exceeded\"}]}"
+  },
+  {
+    "id": "3ab26a6e-48d6-436e-8cc2-228b9470c2ea",
+    "runId": "aabf888c-5b48-4576-a6e0-7dee915b3bc6",
+    "implId": "graphql-js-16",
+    "testCaseId": "0be3846f/8d6b28ac/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "__typename": "Object_ApwfNHZGC"
+      }
+    },
+    "error": "Maximum call stack size exceeded",
+    "stderr": "{\"errors\":[{\"message\":\"Maximum call stack size exceeded\"}]}"
+  },
+  {
+    "id": "81fdadbd-423b-42b4-8880-9849736da80f",
+    "runId": "aabf888c-5b48-4576-a6e0-7dee915b3bc6",
+    "implId": "graphql-js-16",
+    "testCaseId": "0be3846f/9af7c9ba/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "__typename": "Object_ApwfNHZGC",
+        "V810xW": "Object_ApwfNHZGC"
+      }
+    },
+    "error": "Maximum call stack size exceeded",
+    "stderr": "{\"errors\":[{\"message\":\"Maximum call stack size exceeded\"}]}"
+  },
+  {
+    "id": "2f0321da-8f23-4e08-88f8-a27abc853f01",
+    "runId": "aabf888c-5b48-4576-a6e0-7dee915b3bc6",
+    "implId": "graphql-js-16",
+    "testCaseId": "0be3846f/ab33497a/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "Y70": "Object_ApwfNHZGC",
+        "__typename": "Object_ApwfNHZGC"
+      }
+    },
+    "error": "Maximum call stack size exceeded",
+    "stderr": "{\"errors\":[{\"message\":\"Maximum call stack size exceeded\"}]}"
+  },
+  {
+    "id": "46acd2de-73c7-43a7-8666-f74f50402d13",
+    "runId": "aabf888c-5b48-4576-a6e0-7dee915b3bc6",
+    "implId": "graphql-js-16",
+    "testCaseId": "0be3846f/bce4c196/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "o": "Object_ApwfNHZGC",
+        "__typename": "Object_ApwfNHZGC"
+      }
+    },
+    "error": "Maximum call stack size exceeded",
+    "stderr": "{\"errors\":[{\"message\":\"Maximum call stack size exceeded\"}]}"
+  },
+  {
+    "id": "d4548606-b845-4953-8da6-1448320ccdaf",
+    "runId": "aabf888c-5b48-4576-a6e0-7dee915b3bc6",
+    "implId": "graphql-js-16",
+    "testCaseId": "0be3846f/f61a751a/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "__typename": "Object_ApwfNHZGC"
+      }
+    },
+    "error": "Maximum call stack size exceeded",
+    "stderr": "{\"errors\":[{\"message\":\"Maximum call stack size exceeded\"}]}"
+  },
+  {
+    "id": "582d9c04-adba-432b-820a-a92e7dc67ec0",
+    "runId": "aabf888c-5b48-4576-a6e0-7dee915b3bc6",
+    "implId": "graphql-js-16",
+    "testCaseId": "17265ef5/1dc55761/99caab03",
+    "status": "error",
+    "expected": {
+      "data": {
+        "y0X": {
+          "__typename": "Object_ZV7bPt",
+          "kWKM": "N",
+          "o9": "Object_ZV7bPt"
+        },
+        "l": 2,
+        "__typename": "Object_w0wT",
+        "aMv6Cn1": 2
+      }
+    },
+    "error": "Maximum call stack size exceeded",
+    "stderr": "{\"errors\":[{\"message\":\"Maximum call stack size exceeded\"}]}"
+  }
+]

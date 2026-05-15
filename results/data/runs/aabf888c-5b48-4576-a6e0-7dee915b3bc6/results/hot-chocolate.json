@@ -1,0 +1,395 @@
+[
+  {
+    "id": "de0b93ad-a540-45cd-8957-5f23cb7ff610",
+    "runId": "aabf888c-5b48-4576-a6e0-7dee915b3bc6",
+    "implId": "hot-chocolate",
+    "testCaseId": "03573f34/2e32a08b/08277c86",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "__typename": "Object_lpJFn",
+        "H3Nl_": "Object_lpJFn",
+        "puaq39dlg": {
+          "deWZL": "XtCw_c"
+        }
+      }
+    },
+    "actual": {
+      "errors": [
+        {
+          "message": "If a label is passed, it must be unique within all other @defer and @stream directives in the document."
+        }
+      ]
+    }
+  },
+  {
+    "id": "5b31cdac-3335-4b6c-890e-947fd55b287b",
+    "runId": "aabf888c-5b48-4576-a6e0-7dee915b3bc6",
+    "implId": "hot-chocolate",
+    "testCaseId": "03573f34/2e32a08b/179ab86c",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "__typename": "Object_lpJFn",
+        "H3Nl_": "Object_lpJFn",
+        "puaq39dlg": {
+          "deWZL": "XtCw_c"
+        }
+      }
+    },
+    "actual": {
+      "errors": [
+        {
+          "message": "If a label is passed, it must be unique within all other @defer and @stream directives in the document."
+        }
+      ]
+    }
+  },
+  {
+    "id": "be7a946a-4ac1-4b93-8169-273ea4db39b1",
+    "runId": "aabf888c-5b48-4576-a6e0-7dee915b3bc6",
+    "implId": "hot-chocolate",
+    "testCaseId": "1790a98f/2c186b24/44136fa3",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "__typename": "Object_SE"
+      }
+    },
+    "actual": {
+      "errors": [
+        {
+          "message": "If a label is passed, it must be unique within all other @defer and @stream directives in the document."
+        },
+        {
+          "message": "If a label is passed, it must be unique within all other @defer and @stream directives in the document."
+        },
+        {
+          "message": "If a label is passed, it must be unique within all other @defer and @stream directives in the document."
+        }
+      ]
+    }
+  },
+  {
+    "id": "4cc6f7a9-fbe3-49d6-8e95-75b9d263a74f",
+    "runId": "aabf888c-5b48-4576-a6e0-7dee915b3bc6",
+    "implId": "hot-chocolate",
+    "testCaseId": "1be52ade/884c6029/87b1d9f3",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "KeVCZ": {
+          "HNME0tvvti": "Interface_B2S_STUB"
+        },
+        "xcRR2J9": {
+          "__typename": "Object_fh9C3Gr",
+          "OmB_KcrG6": "Object_fh9C3Gr",
+          "X_GlRcp": "Object_fh9C3Gr",
+          "srZ7": {
+            "rfwl4": "xMW"
+          },
+          "oV": "Object_fh9C3Gr"
+        },
+        "__typename": "Object_fh9C3Gr",
+        "srZ7": {
+          "kx": {
+            "__typename": "Object_RuC"
+          },
+          "TPgJ": 2,
+          "yoMAkXiW": {
+            "lF": {
+              "yG3l": "Interface_B2S_STUB"
+            }
+          }
+        },
+        "FZa": {
+          "sAZ": 2,
+          "kx": {
+            "ki": "str",
+            "__typename": "Object_RuC"
+          },
+          "__typename": "Interface_B2S_STUB"
+        },
+        "IG7X": "Object_fh9C3Gr"
+      }
+    },
+    "actual": {
+      "errors": [
+        {
+          "message": "If a label is passed, it must be unique within all other @defer and @stream directives in the document."
+        }
+      ]
+    }
+  },
+  {
+    "id": "53195d62-c93c-4c97-8ee0-dd0f11739f1a",
+    "runId": "aabf888c-5b48-4576-a6e0-7dee915b3bc6",
+    "implId": "hot-chocolate",
+    "testCaseId": "1be52ade/884c6029/8c9c802c",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "KeVCZ": {
+          "HNME0tvvti": "Interface_B2S_STUB"
+        },
+        "xcRR2J9": {
+          "__typename": "Object_fh9C3Gr",
+          "OmB_KcrG6": "Object_fh9C3Gr",
+          "X_GlRcp": "Object_fh9C3Gr",
+          "srZ7": {
+            "rfwl4": "xMW"
+          },
+          "oV": "Object_fh9C3Gr"
+        },
+        "__typename": "Object_fh9C3Gr",
+        "srZ7": {
+          "kx": {
+            "__typename": "Object_RuC"
+          },
+          "TPgJ": 2,
+          "yoMAkXiW": {
+            "lF": {
+              "yG3l": "Interface_B2S_STUB"
+            }
+          }
+        },
+        "FZa": {
+          "sAZ": 2,
+          "kx": {
+            "ki": "str",
+            "__typename": "Object_RuC"
+          },
+          "__typename": "Interface_B2S_STUB"
+        },
+        "IG7X": "Object_fh9C3Gr"
+      }
+    },
+    "actual": {
+      "errors": [
+        {
+          "message": "If a label is passed, it must be unique within all other @defer and @stream directives in the document."
+        }
+      ]
+    }
+  },
+  {
+    "id": "6302fa75-0839-476a-86d6-2f0b6c0a31e5",
+    "runId": "aabf888c-5b48-4576-a6e0-7dee915b3bc6",
+    "implId": "hot-chocolate",
+    "testCaseId": "1be52ade/884c6029/b8ad1f80",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "KeVCZ": {
+          "HNME0tvvti": "Interface_B2S_STUB"
+        },
+        "xcRR2J9": {
+          "__typename": "Object_fh9C3Gr",
+          "OmB_KcrG6": "Object_fh9C3Gr",
+          "X_GlRcp": "Object_fh9C3Gr",
+          "srZ7": {
+            "rfwl4": "xMW"
+          },
+          "oV": "Object_fh9C3Gr"
+        },
+        "__typename": "Object_fh9C3Gr",
+        "srZ7": {
+          "kx": {
+            "__typename": "Object_RuC"
+          },
+          "TPgJ": 2,
+          "yoMAkXiW": {
+            "lF": {
+              "yG3l": "Interface_B2S_STUB"
+            }
+          }
+        },
+        "FZa": {
+          "sAZ": 2,
+          "kx": {
+            "ki": "str",
+            "__typename": "Object_RuC"
+          },
+          "__typename": "Interface_B2S_STUB"
+        },
+        "IG7X": "Object_fh9C3Gr"
+      }
+    },
+    "actual": {
+      "errors": [
+        {
+          "message": "If a label is passed, it must be unique within all other @defer and @stream directives in the document."
+        }
+      ]
+    }
+  },
+  {
+    "id": "f936bd31-c810-4c91-8875-a23b8847a1d9",
+    "runId": "aabf888c-5b48-4576-a6e0-7dee915b3bc6",
+    "implId": "hot-chocolate",
+    "testCaseId": "27db55a1/2d756272/44136fa3",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "__typename": "Object_E",
+        "Ws9OkA2akS": {
+          "i": "Xy171D",
+          "__typename": "Object_E",
+          "O9JHa": "Object_E",
+          "SUq": "Object_E"
+        },
+        "mT1lt": {
+          "__typename": "Object_E"
+        }
+      }
+    },
+    "actual": {
+      "errors": [
+        {
+          "message": "If a label is passed, it must be unique within all other @defer and @stream directives in the document."
+        }
+      ]
+    }
+  },
+  {
+    "id": "2f744691-bed9-4687-8384-8e146af192c5",
+    "runId": "aabf888c-5b48-4576-a6e0-7dee915b3bc6",
+    "implId": "hot-chocolate",
+    "testCaseId": "3972fb23/c696ee3b/44136fa3",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "__typename": "Object_GCqjR",
+        "z": [
+          {
+            "__typename": "Object_Z7QiHm",
+            "NuV": "Object_Z7QiHm",
+            "sAAvtdkUVV": "Object_Z7QiHm",
+            "Ok": "Object_Z7QiHm"
+          },
+          {
+            "__typename": "Object_Z7QiHm",
+            "NuV": "Object_Z7QiHm",
+            "sAAvtdkUVV": "Object_Z7QiHm",
+            "Ok": "Object_Z7QiHm"
+          }
+        ]
+      }
+    },
+    "actual": {
+      "errors": [
+        {
+          "message": "If a label is passed, it must be unique within all other @defer and @stream directives in the document."
+        }
+      ]
+    }
+  },
+  {
+    "id": "a8c61f58-8b7b-4cbf-88bb-0386c11215eb",
+    "runId": "aabf888c-5b48-4576-a6e0-7dee915b3bc6",
+    "implId": "hot-chocolate",
+    "testCaseId": "7bd746db/8f7f47f7/44136fa3",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "lUcuzs6_": "Object_Et",
+        "__typename": "Object_Et",
+        "ODQu": "Object_Et"
+      }
+    },
+    "actual": {
+      "errors": [
+        {
+          "message": "If a label is passed, it must be unique within all other @defer and @stream directives in the document."
+        },
+        {
+          "message": "If a label is passed, it must be unique within all other @defer and @stream directives in the document."
+        },
+        {
+          "message": "If a label is passed, it must be unique within all other @defer and @stream directives in the document."
+        },
+        {
+          "message": "If a label is passed, it must be unique within all other @defer and @stream directives in the document."
+        }
+      ]
+    }
+  },
+  {
+    "id": "6e148e3d-a3cf-4a04-8bdc-80448ef0d42a",
+    "runId": "aabf888c-5b48-4576-a6e0-7dee915b3bc6",
+    "implId": "hot-chocolate",
+    "testCaseId": "9124ab4a/b9924968/44136fa3",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "__typename": "Object_Dm1XS3DX",
+        "Az0lWeuGo": {
+          "LdPs_6kGY": "Object_lKq3WYPzD",
+          "cuM": {
+            "__typename": "Object_PP4"
+          }
+        },
+        "pYLPsVVbq": [
+          {
+            "__typename": "Object_lKq3WYPzD"
+          },
+          {
+            "__typename": "Object_lKq3WYPzD"
+          }
+        ],
+        "pBc": {
+          "__typename": "Object_lKq3WYPzD"
+        },
+        "c85XQ": [
+          {
+            "o": "Object_lKq3WYPzD"
+          },
+          {
+            "o": "Object_lKq3WYPzD"
+          }
+        ],
+        "on": {
+          "tS0s": {
+            "kyR0": "Object_Dm1XS3DX"
+          },
+          "__typename": "Object_Dm1XS3DX",
+          "Az0lWeuGo": {
+            "LdPs_6kGY": "Object_lKq3WYPzD",
+            "cuM": {
+              "__typename": "Object_PP4"
+            }
+          },
+          "pYLPsVVbq": [
+            {
+              "__typename": "Object_lKq3WYPzD"
+            },
+            {
+              "__typename": "Object_lKq3WYPzD"
+            }
+          ],
+          "pBc": {
+            "__typename": "Object_lKq3WYPzD"
+          },
+          "c85XQ": [
+            {
+              "o": "Object_lKq3WYPzD"
+            },
+            {
+              "o": "Object_lKq3WYPzD"
+            }
+          ]
+        }
+      }
+    },
+    "actual": {
+      "errors": [
+        {
+          "message": "If a label is passed, it must be unique within all other @defer and @stream directives in the document."
+        },
+        {
+          "message": "If a label is passed, it must be unique within all other @defer and @stream directives in the document."
+        }
+      ]
+    }
+  }
+]
