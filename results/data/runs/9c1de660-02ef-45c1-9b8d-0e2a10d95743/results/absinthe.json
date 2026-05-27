@@ -1,0 +1,283 @@
+[
+  {
+    "id": "715d09e8-4eaf-456b-8b84-20c07d7bad6e",
+    "runId": "9c1de660-02ef-45c1-9b8d-0e2a10d95743",
+    "implId": "absinthe",
+    "testCaseId": "1caa6308/848aa0e8/44136fa3",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "We": [
+          "str",
+          "str"
+        ],
+        "wiEcekjrm": {
+          "iypGPJKuEu": "Object_Kg",
+          "__typename": "Object_Kg"
+        }
+      }
+    },
+    "actual": {
+      "errors": [
+        {
+          "message": "syntax error before: 'ON'",
+          "locations": [
+            {
+              "line": 1,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "e516d1bb-eaed-4637-85f5-c3a6c537d227",
+    "runId": "9c1de660-02ef-45c1-9b8d-0e2a10d95743",
+    "implId": "absinthe",
+    "testCaseId": "c2e4cd30/30bb1f55/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "eds4F_b": {
+          "__typename": "Object_h",
+          "hvp": {
+            "MWcF": "Interface_hJcUq_STUB"
+          },
+          "PrwtIV_6p": {
+            "__typename": "Interface_hJcUq_STUB"
+          }
+        },
+        "mB1pHKtdc_": "GyrLTb",
+        "__typename": "Object_h"
+      }
+    },
+    "error": "key :hvp not found in:\n\n    %{\n      p: %Absinthe.Type.Field{\n        identifier: :p,\n        name: \"p\",\n        description: nil,\n        type: :union__ajo2_od9,\n        deprecation: nil,\n        args: %{},\n        config: nil,\n        triggers: [],\n        middleware: [\n          {Absinthe.Middleware.Telemetry, []},\n          {Absinthe.Resolution, &ConformerAbsinthe.resolve_field/3}\n        ],\n        complexity: nil,\n        default_value: nil,\n        __private__: [],\n        definition: ConformerAbsinthe.DynamicSchema.Schema1634,\n        __reference__: %{\n          module: ConformerAbsinthe.DynamicSchema.Schema1634,\n          location: %{line: 0, file: \"nofile\"}\n        }\n      },\n      __typename: %Absinthe.Type.Field{\n        identifier: :__typename,\n        name: \"__typename\",\n        description: \"The name of the object type currently being queried.\",\n        type: :string,\n        deprecation: nil,\n        args: %{},\n        config: nil,\n        triggers: %{},\n        middleware: [\n          {{Absinthe.Middleware, :shim},\n           {:object_h, :__typename,\n            [{:ref, Absinthe.Phase.Schema.Introspection, :typename}]}}\n        ],\n        complexity: 0,\n        default_value: nil,\n        __private__: [],\n        definition: Absinthe.Phase.Schema.Introspection,\n        __reference__: %{\n          module: Absinthe.Phase.Schema.Introspection,\n          location: %{\n            line: 74,\n            file: \"/app/deps/absinthe/lib/absinthe/phase/schema/introspection.ex\"\n          }\n        }\n      },\n      g: %Absinthe.Type.Field{\n        identifier: :g,\n        name: \"g\",\n        description: nil,\n        type: :interface_w_wy_zbv9u,\n        deprecation: nil,\n        args: %{},\n        config: nil,\n        triggers: [],\n        middleware: [\n          {Absinthe.Middleware.Telemetry, []},\n          {Absinthe.Resolution, &ConformerAbsinthe.resolve_field/3}\n        ],\n        complexity: nil,\n        default_value: nil,\n        __private__: [],\n        definition: ConformerAbsinthe.DynamicSchema.Schema1634,\n        __reference__: %{\n          module: ConformerAbsinthe.DynamicSchema.Schema1634,\n          location: %{line: 0, file: \"nofile\"}\n        }\n      },\n      j_ej8_m: %Absinthe.Type.Field{\n        identifier: :j_ej8_m,\n        name: \"j_ej8_m\",\n        description: nil,\n        type: :enum_r1_fo,\n        deprecation: nil,\n        args: %{},\n        config: nil,\n        triggers: [],\n        middleware: [\n          {Absinthe.Middleware.Telemetry, []},\n          {Absinthe.Resolution, &ConformerAbsinthe.resolve_field/3}\n        ],\n        complexity: nil,\n        default_value: nil,\n        __private__: [],\n        ...\n      },\n      ...\n    }\n",
+    "stderr": "{\"errors\":[{\"message\":\"key :hvp not found in:\\n\\n    %{\\n      p: %Absinthe.Type.Field{\\n        identifier: :p,\\n        name: \\\"p\\\",\\n        description: nil,\\n        type: :union__ajo2_od9,\\n        deprecation: nil,\\n        args: %{},\\n        config: nil,\\n        triggers: [],\\n        middleware: [\\n          {Absinthe.Middleware.Telemetry, []},\\n          {Absinthe.Resolution, &ConformerAbsinthe.resolve_field/3}\\n        ],\\n        complexity: nil,\\n        default_value: nil,\\n        __private__: [],\\n        definition: ConformerAbsinthe.DynamicSchema.Schema1634,\\n        __reference__: %{\\n          module: ConformerAbsinthe.DynamicSchema.Schema1634,\\n          location: %{line: 0, file: \\\"nofile\\\"}\\n        }\\n      },\\n      __typename: %Absinthe.Type.Field{\\n        identifier: :__typename,\\n        name: \\\"__typename\\\",\\n        description: \\\"The name of the object type currently being queried.\\\",\\n        type: :string,\\n        deprecation: nil,\\n        args: %{},\\n        config: nil,\\n        triggers: %{},\\n        middleware: [\\n          {{Absinthe.Middleware, :shim},\\n           {:object_h, :__typename,\\n            [{:ref, Absinthe.Phase.Schema.Introspection, :typename}]}}\\n        ],\\n        complexity: 0,\\n        default_value: nil,\\n        __private__: [],\\n        definition: Absinthe.Phase.Schema.Introspection,\\n        __reference__: %{\\n          module: Absinthe.Phase.Schema.Introspection,\\n          location: %{\\n            line: 74,\\n            file: \\\"/app/deps/absinthe/lib/absinthe/phase/schema/introspection.ex\\\"\\n          }\\n        }\\n      },\\n      g: %Absinthe.Type.Field{\\n        identifier: :g,\\n        name: \\\"g\\\",\\n        description: nil,\\n        type: :interface_w_wy_zbv9u,\\n        deprecation: nil,\\n        args: %{},\\n        config: nil,\\n        triggers: [],\\n        middleware: [\\n          {Absinthe.Middleware.Telemetry, []},\\n          {Absinthe.Resolution, &ConformerAbsinthe.resolve_field/3}\\n        ],\\n        complexity: nil,\\n        default_value: nil,\\n        __private__: [],\\n        definition: ConformerAbsinthe.DynamicSchema.Schema1634,\\n        __reference__: %{\\n          module: ConformerAbsinthe.DynamicSchema.Schema1634,\\n          location: %{line: 0, file: \\\"nofile\\\"}\\n        }\\n      },\\n      j_ej8_m: %Absinthe.Type.Field{\\n        identifier: :j_ej8_m,\\n        name: \\\"j_ej8_m\\\",\\n        description: nil,\\n        type: :enum_r1_fo,\\n        deprecation: nil,\\n        args: %{},\\n        config: nil,\\n        triggers: [],\\n        middleware: [\\n          {Absinthe.Middleware.Telemetry, []},\\n          {Absinthe.Resolution, &ConformerAbsinthe.resolve_field/3}\\n        ],\\n        complexity: nil,\\n        default_value: nil,\\n        __private__: [],\\n        ...\\n      },\\n      ...\\n    }\\n\"}]}"
+  },
+  {
+    "id": "d8ec099e-72e1-4e25-80f0-b00207b27878",
+    "runId": "9c1de660-02ef-45c1-9b8d-0e2a10d95743",
+    "implId": "absinthe",
+    "testCaseId": "c2e4cd30/6064d8d7/2804ee27",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "eds4F_b": {
+          "mB1pHKtdc_": "GyrLTb"
+        },
+        "xji": {
+          "p": {
+            "__typename": "Object_H"
+          },
+          "yHGR": {
+            "__typename": "Object_H"
+          }
+        }
+      }
+    },
+    "actual": {
+      "data": {
+        "eds4F_b": {},
+        "xji": {
+          "p": {
+            "__typename": "Object_H"
+          },
+          "yHGR": {
+            "__typename": "Object_H"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "cea850c7-7364-44fd-805b-ee9b4809ab2d",
+    "runId": "9c1de660-02ef-45c1-9b8d-0e2a10d95743",
+    "implId": "absinthe",
+    "testCaseId": "c2e4cd30/6064d8d7/34aa27a9",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "eds4F_b": {
+          "mB1pHKtdc_": "GyrLTb"
+        },
+        "xji": {
+          "p": {
+            "__typename": "Object_H"
+          },
+          "yHGR": {
+            "__typename": "Object_H"
+          }
+        }
+      }
+    },
+    "actual": {
+      "data": {
+        "eds4F_b": {},
+        "xji": {
+          "p": {
+            "__typename": "Object_H"
+          },
+          "yHGR": {
+            "__typename": "Object_H"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "2f15026e-dc8b-4dd8-8fc4-27857ab019b4",
+    "runId": "9c1de660-02ef-45c1-9b8d-0e2a10d95743",
+    "implId": "absinthe",
+    "testCaseId": "c2e4cd30/f2d2c75d/45149ebe",
+    "status": "error",
+    "expected": {
+      "data": {
+        "xji": {
+          "g": {
+            "hvp": {
+              "__typename": "Interface_hJcUq_STUB"
+            },
+            "eds4F_b": {
+              "__typename": "Object_h"
+            },
+            "mB1pHKtdc_": "GyrLTb"
+          },
+          "p": {
+            "__typename": "Object_H",
+            "g": {
+              "mB1pHKtdc_": "GyrLTb"
+            }
+          },
+          "__typename": "Object_H"
+        },
+        "Pv81BXH": "GyrLTb",
+        "__typename": "Object_h",
+        "eds4F_b": {
+          "__typename": "Object_h",
+          "eds4F_b": {
+            "__typename": "Object_h"
+          }
+        },
+        "hd64": {
+          "__typename": "Interface_hJcUq_STUB",
+          "jizk": "Interface_hJcUq_STUB",
+          "jch": 2,
+          "cMXRrKGoB": 2,
+          "B9ZZkWf": 2
+        },
+        "hvp": {
+          "__typename": "Interface_hJcUq_STUB"
+        },
+        "lR": "Object_h"
+      }
+    },
+    "error": "key :hvp not found in:\n\n    %{\n      p: %Absinthe.Type.Field{\n        identifier: :p,\n        name: \"p\",\n        description: nil,\n        type: :union__ajo2_od9,\n        deprecation: nil,\n        args: %{},\n        config: nil,\n        triggers: [],\n        middleware: [\n          {Absinthe.Middleware.Telemetry, []},\n          {Absinthe.Resolution, &ConformerAbsinthe.resolve_field/3}\n        ],\n        complexity: nil,\n        default_value: nil,\n        __private__: [],\n        definition: ConformerAbsinthe.DynamicSchema.Schema1642,\n        __reference__: %{\n          module: ConformerAbsinthe.DynamicSchema.Schema1642,\n          location: %{line: 0, file: \"nofile\"}\n        }\n      },\n      __typename: %Absinthe.Type.Field{\n        identifier: :__typename,\n        name: \"__typename\",\n        description: \"The name of the object type currently being queried.\",\n        type: :string,\n        deprecation: nil,\n        args: %{},\n        config: nil,\n        triggers: %{},\n        middleware: [\n          {{Absinthe.Middleware, :shim},\n           {:object_h, :__typename,\n            [{:ref, Absinthe.Phase.Schema.Introspection, :typename}]}}\n        ],\n        complexity: 0,\n        default_value: nil,\n        __private__: [],\n        definition: Absinthe.Phase.Schema.Introspection,\n        __reference__: %{\n          module: Absinthe.Phase.Schema.Introspection,\n          location: %{\n            line: 74,\n            file: \"/app/deps/absinthe/lib/absinthe/phase/schema/introspection.ex\"\n          }\n        }\n      },\n      g: %Absinthe.Type.Field{\n        identifier: :g,\n        name: \"g\",\n        description: nil,\n        type: :interface_w_wy_zbv9u,\n        deprecation: nil,\n        args: %{},\n        config: nil,\n        triggers: [],\n        middleware: [\n          {Absinthe.Middleware.Telemetry, []},\n          {Absinthe.Resolution, &ConformerAbsinthe.resolve_field/3}\n        ],\n        complexity: nil,\n        default_value: nil,\n        __private__: [],\n        definition: ConformerAbsinthe.DynamicSchema.Schema1642,\n        __reference__: %{\n          module: ConformerAbsinthe.DynamicSchema.Schema1642,\n          location: %{line: 0, file: \"nofile\"}\n        }\n      },\n      j_ej8_m: %Absinthe.Type.Field{\n        identifier: :j_ej8_m,\n        name: \"j_ej8_m\",\n        description: nil,\n        type: :enum_r1_fo,\n        deprecation: nil,\n        args: %{},\n        config: nil,\n        triggers: [],\n        middleware: [\n          {Absinthe.Middleware.Telemetry, []},\n          {Absinthe.Resolution, &ConformerAbsinthe.resolve_field/3}\n        ],\n        complexity: nil,\n        default_value: nil,\n        __private__: [],\n        ...\n      },\n      ...\n    }\n",
+    "stderr": "{\"errors\":[{\"message\":\"key :hvp not found in:\\n\\n    %{\\n      p: %Absinthe.Type.Field{\\n        identifier: :p,\\n        name: \\\"p\\\",\\n        description: nil,\\n        type: :union__ajo2_od9,\\n        deprecation: nil,\\n        args: %{},\\n        config: nil,\\n        triggers: [],\\n        middleware: [\\n          {Absinthe.Middleware.Telemetry, []},\\n          {Absinthe.Resolution, &ConformerAbsinthe.resolve_field/3}\\n        ],\\n        complexity: nil,\\n        default_value: nil,\\n        __private__: [],\\n        definition: ConformerAbsinthe.DynamicSchema.Schema1642,\\n        __reference__: %{\\n          module: ConformerAbsinthe.DynamicSchema.Schema1642,\\n          location: %{line: 0, file: \\\"nofile\\\"}\\n        }\\n      },\\n      __typename: %Absinthe.Type.Field{\\n        identifier: :__typename,\\n        name: \\\"__typename\\\",\\n        description: \\\"The name of the object type currently being queried.\\\",\\n        type: :string,\\n        deprecation: nil,\\n        args: %{},\\n        config: nil,\\n        triggers: %{},\\n        middleware: [\\n          {{Absinthe.Middleware, :shim},\\n           {:object_h, :__typename,\\n            [{:ref, Absinthe.Phase.Schema.Introspection, :typename}]}}\\n        ],\\n        complexity: 0,\\n        default_value: nil,\\n        __private__: [],\\n        definition: Absinthe.Phase.Schema.Introspection,\\n        __reference__: %{\\n          module: Absinthe.Phase.Schema.Introspection,\\n          location: %{\\n            line: 74,\\n            file: \\\"/app/deps/absinthe/lib/absinthe/phase/schema/introspection.ex\\\"\\n          }\\n        }\\n      },\\n      g: %Absinthe.Type.Field{\\n        identifier: :g,\\n        name: \\\"g\\\",\\n        description: nil,\\n        type: :interface_w_wy_zbv9u,\\n        deprecation: nil,\\n        args: %{},\\n        config: nil,\\n        triggers: [],\\n        middleware: [\\n          {Absinthe.Middleware.Telemetry, []},\\n          {Absinthe.Resolution, &ConformerAbsinthe.resolve_field/3}\\n        ],\\n        complexity: nil,\\n        default_value: nil,\\n        __private__: [],\\n        definition: ConformerAbsinthe.DynamicSchema.Schema1642,\\n        __reference__: %{\\n          module: ConformerAbsinthe.DynamicSchema.Schema1642,\\n          location: %{line: 0, file: \\\"nofile\\\"}\\n        }\\n      },\\n      j_ej8_m: %Absinthe.Type.Field{\\n        identifier: :j_ej8_m,\\n        name: \\\"j_ej8_m\\\",\\n        description: nil,\\n        type: :enum_r1_fo,\\n        deprecation: nil,\\n        args: %{},\\n        config: nil,\\n        triggers: [],\\n        middleware: [\\n          {Absinthe.Middleware.Telemetry, []},\\n          {Absinthe.Resolution, &ConformerAbsinthe.resolve_field/3}\\n        ],\\n        complexity: nil,\\n        default_value: nil,\\n        __private__: [],\\n        ...\\n      },\\n      ...\\n    }\\n\"}]}"
+  },
+  {
+    "id": "dc2be334-69e2-4490-8669-a8129f0b4fee",
+    "runId": "9c1de660-02ef-45c1-9b8d-0e2a10d95743",
+    "implId": "absinthe",
+    "testCaseId": "c2e4cd30/f2d2c75d/9e4f189b",
+    "status": "error",
+    "expected": {
+      "data": {
+        "xji": {
+          "g": {
+            "hvp": {
+              "__typename": "Interface_hJcUq_STUB"
+            },
+            "eds4F_b": {
+              "__typename": "Object_h"
+            },
+            "mB1pHKtdc_": "GyrLTb"
+          },
+          "p": {
+            "__typename": "Object_H"
+          },
+          "__typename": "Object_H"
+        },
+        "Pv81BXH": "GyrLTb",
+        "__typename": "Object_h",
+        "eds4F_b": {
+          "__typename": "Object_h",
+          "eds4F_b": {
+            "__typename": "Object_h"
+          }
+        },
+        "hd64": {
+          "__typename": "Interface_hJcUq_STUB",
+          "jizk": "Interface_hJcUq_STUB",
+          "jch": 2,
+          "cMXRrKGoB": 2,
+          "B9ZZkWf": 2
+        },
+        "hvp": {
+          "__typename": "Interface_hJcUq_STUB"
+        },
+        "lR": "Object_h"
+      }
+    },
+    "error": "key :hvp not found in:\n\n    %{\n      p: %Absinthe.Type.Field{\n        identifier: :p,\n        name: \"p\",\n        description: nil,\n        type: :union__ajo2_od9,\n        deprecation: nil,\n        args: %{},\n        config: nil,\n        triggers: [],\n        middleware: [\n          {Absinthe.Middleware.Telemetry, []},\n          {Absinthe.Resolution, &ConformerAbsinthe.resolve_field/3}\n        ],\n        complexity: nil,\n        default_value: nil,\n        __private__: [],\n        definition: ConformerAbsinthe.DynamicSchema.Schema1643,\n        __reference__: %{\n          module: ConformerAbsinthe.DynamicSchema.Schema1643,\n          location: %{line: 0, file: \"nofile\"}\n        }\n      },\n      __typename: %Absinthe.Type.Field{\n        identifier: :__typename,\n        name: \"__typename\",\n        description: \"The name of the object type currently being queried.\",\n        type: :string,\n        deprecation: nil,\n        args: %{},\n        config: nil,\n        triggers: %{},\n        middleware: [\n          {{Absinthe.Middleware, :shim},\n           {:object_h, :__typename,\n            [{:ref, Absinthe.Phase.Schema.Introspection, :typename}]}}\n        ],\n        complexity: 0,\n        default_value: nil,\n        __private__: [],\n        definition: Absinthe.Phase.Schema.Introspection,\n        __reference__: %{\n          module: Absinthe.Phase.Schema.Introspection,\n          location: %{\n            line: 74,\n            file: \"/app/deps/absinthe/lib/absinthe/phase/schema/introspection.ex\"\n          }\n        }\n      },\n      g: %Absinthe.Type.Field{\n        identifier: :g,\n        name: \"g\",\n        description: nil,\n        type: :interface_w_wy_zbv9u,\n        deprecation: nil,\n        args: %{},\n        config: nil,\n        triggers: [],\n        middleware: [\n          {Absinthe.Middleware.Telemetry, []},\n          {Absinthe.Resolution, &ConformerAbsinthe.resolve_field/3}\n        ],\n        complexity: nil,\n        default_value: nil,\n        __private__: [],\n        definition: ConformerAbsinthe.DynamicSchema.Schema1643,\n        __reference__: %{\n          module: ConformerAbsinthe.DynamicSchema.Schema1643,\n          location: %{line: 0, file: \"nofile\"}\n        }\n      },\n      j_ej8_m: %Absinthe.Type.Field{\n        identifier: :j_ej8_m,\n        name: \"j_ej8_m\",\n        description: nil,\n        type: :enum_r1_fo,\n        deprecation: nil,\n        args: %{},\n        config: nil,\n        triggers: [],\n        middleware: [\n          {Absinthe.Middleware.Telemetry, []},\n          {Absinthe.Resolution, &ConformerAbsinthe.resolve_field/3}\n        ],\n        complexity: nil,\n        default_value: nil,\n        __private__: [],\n        ...\n      },\n      ...\n    }\n",
+    "stderr": "{\"errors\":[{\"message\":\"key :hvp not found in:\\n\\n    %{\\n      p: %Absinthe.Type.Field{\\n        identifier: :p,\\n        name: \\\"p\\\",\\n        description: nil,\\n        type: :union__ajo2_od9,\\n        deprecation: nil,\\n        args: %{},\\n        config: nil,\\n        triggers: [],\\n        middleware: [\\n          {Absinthe.Middleware.Telemetry, []},\\n          {Absinthe.Resolution, &ConformerAbsinthe.resolve_field/3}\\n        ],\\n        complexity: nil,\\n        default_value: nil,\\n        __private__: [],\\n        definition: ConformerAbsinthe.DynamicSchema.Schema1643,\\n        __reference__: %{\\n          module: ConformerAbsinthe.DynamicSchema.Schema1643,\\n          location: %{line: 0, file: \\\"nofile\\\"}\\n        }\\n      },\\n      __typename: %Absinthe.Type.Field{\\n        identifier: :__typename,\\n        name: \\\"__typename\\\",\\n        description: \\\"The name of the object type currently being queried.\\\",\\n        type: :string,\\n        deprecation: nil,\\n        args: %{},\\n        config: nil,\\n        triggers: %{},\\n        middleware: [\\n          {{Absinthe.Middleware, :shim},\\n           {:object_h, :__typename,\\n            [{:ref, Absinthe.Phase.Schema.Introspection, :typename}]}}\\n        ],\\n        complexity: 0,\\n        default_value: nil,\\n        __private__: [],\\n        definition: Absinthe.Phase.Schema.Introspection,\\n        __reference__: %{\\n          module: Absinthe.Phase.Schema.Introspection,\\n          location: %{\\n            line: 74,\\n            file: \\\"/app/deps/absinthe/lib/absinthe/phase/schema/introspection.ex\\\"\\n          }\\n        }\\n      },\\n      g: %Absinthe.Type.Field{\\n        identifier: :g,\\n        name: \\\"g\\\",\\n        description: nil,\\n        type: :interface_w_wy_zbv9u,\\n        deprecation: nil,\\n        args: %{},\\n        config: nil,\\n        triggers: [],\\n        middleware: [\\n          {Absinthe.Middleware.Telemetry, []},\\n          {Absinthe.Resolution, &ConformerAbsinthe.resolve_field/3}\\n        ],\\n        complexity: nil,\\n        default_value: nil,\\n        __private__: [],\\n        definition: ConformerAbsinthe.DynamicSchema.Schema1643,\\n        __reference__: %{\\n          module: ConformerAbsinthe.DynamicSchema.Schema1643,\\n          location: %{line: 0, file: \\\"nofile\\\"}\\n        }\\n      },\\n      j_ej8_m: %Absinthe.Type.Field{\\n        identifier: :j_ej8_m,\\n        name: \\\"j_ej8_m\\\",\\n        description: nil,\\n        type: :enum_r1_fo,\\n        deprecation: nil,\\n        args: %{},\\n        config: nil,\\n        triggers: [],\\n        middleware: [\\n          {Absinthe.Middleware.Telemetry, []},\\n          {Absinthe.Resolution, &ConformerAbsinthe.resolve_field/3}\\n        ],\\n        complexity: nil,\\n        default_value: nil,\\n        __private__: [],\\n        ...\\n      },\\n      ...\\n    }\\n\"}]}"
+  },
+  {
+    "id": "0b93d3d3-76f6-405d-812c-a60270554ee9",
+    "runId": "9c1de660-02ef-45c1-9b8d-0e2a10d95743",
+    "implId": "absinthe",
+    "testCaseId": "e0b58892/277e09ff/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "N2Lz18ud": 2,
+        "__typename": "Object_Xni5coG"
+      }
+    },
+    "error": "Compilation failed:\n---------------------------------------\n## Locations\nnofile:0\n\nThe default_value for an enum must be present in the enum values.\n\nCould not use default value of `nil` for %Absinthe.Blueprint.TypeReference.List{of_type: %Absinthe.Blueprint.TypeReference.Name{name: \"Enum_O4uWDZ\", schema_node: nil, errors: []}, errors: []}.\n\nValid values are:\n\n * :g8s_mxqa\n * :s_db_no3\n * :v\n\n",
+    "stderr": "{\"errors\":[{\"message\":\"Compilation failed:\\n---------------------------------------\\n## Locations\\nnofile:0\\n\\nThe default_value for an enum must be present in the enum values.\\n\\nCould not use default value of `nil` for %Absinthe.Blueprint.TypeReference.List{of_type: %Absinthe.Blueprint.TypeReference.Name{name: \\\"Enum_O4uWDZ\\\", schema_node: nil, errors: []}, errors: []}.\\n\\nValid values are:\\n\\n * :g8s_mxqa\\n * :s_db_no3\\n * :v\\n\\n\"}]}"
+  },
+  {
+    "id": "e874a672-293c-48c0-8600-3a62ac85b177",
+    "runId": "9c1de660-02ef-45c1-9b8d-0e2a10d95743",
+    "implId": "absinthe",
+    "testCaseId": "e0b58892/53836732/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "__typename": "Object_Xni5coG"
+      }
+    },
+    "error": "Compilation failed:\n---------------------------------------\n## Locations\nnofile:0\n\nThe default_value for an enum must be present in the enum values.\n\nCould not use default value of `nil` for %Absinthe.Blueprint.TypeReference.List{of_type: %Absinthe.Blueprint.TypeReference.Name{name: \"Enum_O4uWDZ\", schema_node: nil, errors: []}, errors: []}.\n\nValid values are:\n\n * :g8s_mxqa\n * :s_db_no3\n * :v\n\n",
+    "stderr": "{\"errors\":[{\"message\":\"Compilation failed:\\n---------------------------------------\\n## Locations\\nnofile:0\\n\\nThe default_value for an enum must be present in the enum values.\\n\\nCould not use default value of `nil` for %Absinthe.Blueprint.TypeReference.List{of_type: %Absinthe.Blueprint.TypeReference.Name{name: \\\"Enum_O4uWDZ\\\", schema_node: nil, errors: []}, errors: []}.\\n\\nValid values are:\\n\\n * :g8s_mxqa\\n * :s_db_no3\\n * :v\\n\\n\"}]}"
+  },
+  {
+    "id": "84e3efe2-4d23-40b9-8cf3-8e1f646a1675",
+    "runId": "9c1de660-02ef-45c1-9b8d-0e2a10d95743",
+    "implId": "absinthe",
+    "testCaseId": "e0b58892/6d6f8c61/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "xeem_4RbX": 2
+      }
+    },
+    "error": "Compilation failed:\n---------------------------------------\n## Locations\nnofile:0\n\nThe default_value for an enum must be present in the enum values.\n\nCould not use default value of `nil` for %Absinthe.Blueprint.TypeReference.List{of_type: %Absinthe.Blueprint.TypeReference.Name{name: \"Enum_O4uWDZ\", schema_node: nil, errors: []}, errors: []}.\n\nValid values are:\n\n * :g8s_mxqa\n * :s_db_no3\n * :v\n\n",
+    "stderr": "{\"errors\":[{\"message\":\"Compilation failed:\\n---------------------------------------\\n## Locations\\nnofile:0\\n\\nThe default_value for an enum must be present in the enum values.\\n\\nCould not use default value of `nil` for %Absinthe.Blueprint.TypeReference.List{of_type: %Absinthe.Blueprint.TypeReference.Name{name: \\\"Enum_O4uWDZ\\\", schema_node: nil, errors: []}, errors: []}.\\n\\nValid values are:\\n\\n * :g8s_mxqa\\n * :s_db_no3\\n * :v\\n\\n\"}]}"
+  },
+  {
+    "id": "c0106b1c-2de9-44ec-889a-e3cd63ef5b91",
+    "runId": "9c1de660-02ef-45c1-9b8d-0e2a10d95743",
+    "implId": "absinthe",
+    "testCaseId": "e0b58892/7e0b6fde/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "Ui2B_t": "Object_Xni5coG",
+        "__typename": "Object_Xni5coG"
+      }
+    },
+    "error": "Compilation failed:\n---------------------------------------\n## Locations\nnofile:0\n\nThe default_value for an enum must be present in the enum values.\n\nCould not use default value of `nil` for %Absinthe.Blueprint.TypeReference.List{of_type: %Absinthe.Blueprint.TypeReference.Name{name: \"Enum_O4uWDZ\", schema_node: nil, errors: []}, errors: []}.\n\nValid values are:\n\n * :g8s_mxqa\n * :s_db_no3\n * :v\n\n",
+    "stderr": "{\"errors\":[{\"message\":\"Compilation failed:\\n---------------------------------------\\n## Locations\\nnofile:0\\n\\nThe default_value for an enum must be present in the enum values.\\n\\nCould not use default value of `nil` for %Absinthe.Blueprint.TypeReference.List{of_type: %Absinthe.Blueprint.TypeReference.Name{name: \\\"Enum_O4uWDZ\\\", schema_node: nil, errors: []}, errors: []}.\\n\\nValid values are:\\n\\n * :g8s_mxqa\\n * :s_db_no3\\n * :v\\n\\n\"}]}"
+  }
+]
