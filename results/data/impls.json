@@ -25,8 +25,8 @@
     "language": "unknown",
     "manifestUrl": "https://github.com/jbellenger/graphql-conformance/blob/master/impls/grafast/manifest.json",
     "repoUrl": "https://github.com/graphile/crystal",
-    "version": "1.0.1",
-    "versionUrl": "https://github.com/graphile/crystal/releases/tag/grafast@1.0.1",
+    "version": "1.0.2",
+    "versionUrl": "https://github.com/graphile/crystal/releases/tag/grafast@1.0.2",
     "versionUrlTemplate": "https://github.com/graphile/crystal/releases/tag/grafast@{version}"
   },
   {
@@ -85,8 +85,8 @@
     "language": "unknown",
     "manifestUrl": "https://github.com/jbellenger/graphql-conformance/blob/master/impls/graphql-ruby/manifest.json",
     "repoUrl": "https://github.com/rmosolgo/graphql-ruby",
-    "version": "2.6.2",
-    "versionUrl": "https://github.com/rmosolgo/graphql-ruby/releases/tag/v2.6.2",
+    "version": "2.6.3",
+    "versionUrl": "https://github.com/rmosolgo/graphql-ruby/releases/tag/v2.6.3",
     "versionUrlTemplate": "https://github.com/rmosolgo/graphql-ruby/releases/tag/v{version}"
   },
   {
@@ -115,8 +115,8 @@
     "language": "unknown",
     "manifestUrl": "https://github.com/jbellenger/graphql-conformance/blob/master/impls/async-graphql/manifest.json",
     "repoUrl": "https://github.com/async-graphql/async-graphql",
-    "version": "7.2.1",
-    "versionUrl": "https://crates.io/crates/async-graphql/7.2.1",
+    "version": "8.0.0-rc.5",
+    "versionUrl": "https://crates.io/crates/async-graphql/8.0.0-rc.5",
     "versionUrlTemplate": "https://crates.io/crates/async-graphql/{version}"
   },
   {
