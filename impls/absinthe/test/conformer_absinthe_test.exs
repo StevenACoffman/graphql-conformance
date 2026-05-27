@@ -90,6 +90,18 @@ defmodule ConformerAbsintheTest do
       query = "{ x { id ... on Alpha { a } ... on Zeta { z } } }"
       assert %{data: %{"x" => %{"id" => "id", "z" => 2}}} = exec(sdl, query)
     end
+
+    test "abstract fields can resolve to the declared query root object" do
+      sdl = """
+      schema { query: Root }
+      interface Node { name: String }
+      type Root implements Node { child: Node name: String }
+      """
+
+      query = "{ child { ... on Root { name } } }"
+
+      assert %{data: %{"child" => %{"name" => "str"}}} = exec(sdl, query)
+    end
   end
 
   describe "@defer / @stream directive declarations" do
@@ -272,6 +284,40 @@ defmodule ConformerAbsintheTest do
       refute Map.has_key?(data, "x")
 
       assert %{data: %{"x" => "str"}} = exec(sdl, query, %{"skip" => false})
+    end
+
+    test "accepts custom directives on variable definitions" do
+      sdl = """
+      directive @tag on VARIABLE_DEFINITION
+      type Q { x: String }
+      schema { query: Q }
+      """
+
+      query = "query($skip: Boolean! = false @tag) { x @skip(if: $skip) }"
+
+      assert %{data: %{"x" => "str"}} = exec(sdl, query, %{"skip" => false})
+    end
+  end
+
+  describe "name normalization" do
+    test "accepts legal names that normalize to reserved-looking Absinthe identifiers" do
+      sdl = """
+      type Q { _Yyo2pb: String }
+      schema { query: Q }
+      """
+
+      assert %{data: %{"_Yyo2pb" => "str"}} = exec(sdl, "{ _Yyo2pb }")
+    end
+
+    test "does not reject unused type names that collide after Absinthe normalization" do
+      sdl = """
+      input Input_I { a: String }
+      input Input_i { b: String }
+      type Q { x: String }
+      schema { query: Q }
+      """
+
+      assert %{data: %{"x" => "str"}} = exec(sdl, "{ x }")
     end
   end
 end

@@ -36,8 +36,28 @@ defmodule ConformerAbsinthe do
     {:ok, resolve_value(resolution.definition.schema_node.type, resolution.schema)}
   end
 
-  def resolve_abstract_type(%{__conformer_type_name: type_name}, _resolution), do: type_name
+  def resolve_abstract_type(%{__conformer_type_name: type_name}, resolution) do
+    if Absinthe.Schema.lookup_type(resolution.schema, type_name) do
+      type_name
+    else
+      root_type_identifier(resolution.schema, type_name)
+    end
+  end
+
   def resolve_abstract_type(_, _resolution), do: nil
+
+  defp root_type_identifier(schema, type_name) do
+    [:query, :mutation, :subscription]
+    |> Enum.find_value(fn root_identifier ->
+      case Absinthe.Schema.lookup_type(schema, root_identifier) do
+        %{name: name} ->
+          if identifier(name) == type_name, do: root_identifier
+
+        _ ->
+          nil
+      end
+    end)
+  end
 
   def serialize_scalar(value), do: value
   def parse_scalar(value), do: {:ok, value}

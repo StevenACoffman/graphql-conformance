@@ -2,13 +2,24 @@ defmodule ConformerAbsinthe.DirectiveSupport do
   @moduledoc false
 
   alias Absinthe.{Blueprint, Pipeline, Schema, Type}
+  alias Absinthe.Blueprint.Document
   alias Absinthe.Blueprint.Input
 
   @schema_known_directives_phase Absinthe.Phase.Schema.Validation.KnownDirectives
+  @schema_unique_type_names_phase Absinthe.Phase.Schema.Validation.TypeNamesAreUnique
+  @schema_reserved_names_phase Absinthe.Phase.Schema.Validation.TypeNamesAreReserved
+  @schema_object_fields_phase Absinthe.Phase.Schema.Validation.ObjectMustDefineFields
   @document_resolution_anchor Absinthe.Phase.Document.Arguments.VariableTypesMatch
 
   def pipeline(pipeline) do
     pipeline
+    # Absinthe validates normalized internal names here. Imported SDL names are
+    # case-sensitive, but Macro.underscore/1 can collapse distinct names such as
+    # `Input_i`/`Input_I` and turn legal names such as `_Foo` into reserved-
+    # looking internal names such as `__foo`.
+    |> Pipeline.without(@schema_unique_type_names_phase)
+    |> Pipeline.without(@schema_reserved_names_phase)
+    |> Pipeline.without(@schema_object_fields_phase)
     |> insert_before_if_present(@schema_known_directives_phase, __MODULE__.SchemaPhase)
     |> insert_before_if_present(@document_resolution_anchor, __MODULE__.DocumentPhase)
   end
@@ -25,10 +36,25 @@ defmodule ConformerAbsinthe.DirectiveSupport do
   def resolve_document_blueprint(%Blueprint{schema: schema} = blueprint)
       when not is_nil(schema) do
     # Document directives are resolved against the already-compiled schema.
-    resolve_blueprint_directives(blueprint, schema, schema, blueprint.adapter)
+    blueprint
+    |> strip_variable_definition_directives()
+    |> resolve_blueprint_directives(schema, schema, blueprint.adapter)
   end
 
   def resolve_document_blueprint(%Blueprint{} = blueprint), do: blueprint
+
+  defp strip_variable_definition_directives(%Blueprint{} = blueprint) do
+    # Absinthe 1.10.2 declares VARIABLE_DEFINITION as a directive location but
+    # its placement validator has no clause for variable definitions. These
+    # directives have no execution effect in the conformance driver.
+    Blueprint.prewalk(blueprint, fn
+      %Document.VariableDefinition{} = variable_definition ->
+        %{variable_definition | directives: []}
+
+      node ->
+        node
+    end)
+  end
 
   defp insert_before_if_present(pipeline, phase, additional) do
     if Enum.any?(List.flatten(pipeline), &phase_match?(&1, phase)) do
