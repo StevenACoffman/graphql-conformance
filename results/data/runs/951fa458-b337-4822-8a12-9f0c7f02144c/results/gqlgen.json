@@ -1,0 +1,188 @@
+[
+  {
+    "id": "8e8a5b25-0db0-4578-8d05-6c7e0c468294",
+    "runId": "951fa458-b337-4822-8a12-9f0c7f02144c",
+    "implId": "gqlgen",
+    "testCaseId": "1a83f1c3/d0cee1b5/69eedd1b",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "__typename": "Object_GjrbD",
+        "zOSZRbzK": "Object_GjrbD",
+        "taKQojG": "Object_GjrbD",
+        "xe16FkAgSh": {
+          "__typename": "Object_p"
+        }
+      }
+    },
+    "actual": {
+      "data": null,
+      "errors": [
+        {
+          "message": "Variable \"$qQSvVphTF\" is never used.",
+          "locations": [
+            {
+              "line": 1,
+              "column": 8
+            }
+          ],
+          "extensions": {
+            "code": "GRAPHQL_VALIDATION_FAILED"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "492691be-bb80-4552-884e-8ca3d8411e57",
+    "runId": "951fa458-b337-4822-8a12-9f0c7f02144c",
+    "implId": "gqlgen",
+    "testCaseId": "1a83f1c3/d0cee1b5/7f8046f0",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "__typename": "Object_GjrbD",
+        "zOSZRbzK": "Object_GjrbD",
+        "taKQojG": "Object_GjrbD",
+        "xe16FkAgSh": {
+          "__typename": "Object_p"
+        }
+      }
+    },
+    "actual": {
+      "data": null,
+      "errors": [
+        {
+          "message": "Variable \"$qQSvVphTF\" is never used.",
+          "locations": [
+            {
+              "line": 1,
+              "column": 8
+            }
+          ],
+          "extensions": {
+            "code": "GRAPHQL_VALIDATION_FAILED"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "106ba9d7-32e4-48a5-87e6-f7b804b04df5",
+    "runId": "951fa458-b337-4822-8a12-9f0c7f02144c",
+    "implId": "gqlgen",
+    "testCaseId": "1a83f1c3/d0cee1b5/cdcee300",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "__typename": "Object_GjrbD",
+        "zOSZRbzK": "Object_GjrbD",
+        "taKQojG": "Object_GjrbD",
+        "xe16FkAgSh": {
+          "__typename": "Object_p"
+        }
+      }
+    },
+    "actual": {
+      "data": null,
+      "errors": [
+        {
+          "message": "Variable \"$qQSvVphTF\" is never used.",
+          "locations": [
+            {
+              "line": 1,
+              "column": 8
+            }
+          ],
+          "extensions": {
+            "code": "GRAPHQL_VALIDATION_FAILED"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "2af69c44-0dab-4024-8fb2-093f7087e598",
+    "runId": "951fa458-b337-4822-8a12-9f0c7f02144c",
+    "implId": "gqlgen",
+    "testCaseId": "656ced21/1da08990/3a7eeb80",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "qd": {
+          "uXrXF": 2,
+          "gQel": "id"
+        },
+        "__typename": "Object_pDiTNo",
+        "AF8": {
+          "__typename": "Interface_mzAQ_STUB",
+          "gQel": "id",
+          "vVV8YbNuo": {
+            "a3XRo1F": "d9K"
+          },
+          "uXrXF": 2
+        },
+        "wtVA2w": "Object_pDiTNo"
+      }
+    },
+    "actual": {
+      "data": null,
+      "errors": [
+        {
+          "message": "Variable \"$dAPPn6Ht\" is never used in operation \"EN\".",
+          "locations": [
+            {
+              "line": 1,
+              "column": 10
+            }
+          ],
+          "extensions": {
+            "code": "GRAPHQL_VALIDATION_FAILED"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "6398d2bd-0304-4d27-8a7f-f2360f2f2d1c",
+    "runId": "951fa458-b337-4822-8a12-9f0c7f02144c",
+    "implId": "gqlgen",
+    "testCaseId": "656ced21/1da08990/b9fe7f55",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "qd": {
+          "uXrXF": 2,
+          "gQel": "id"
+        },
+        "__typename": "Object_pDiTNo",
+        "AF8": {
+          "__typename": "Interface_mzAQ_STUB",
+          "gQel": "id",
+          "vVV8YbNuo": {
+            "a3XRo1F": "d9K"
+          },
+          "uXrXF": 2
+        },
+        "wtVA2w": "Object_pDiTNo"
+      }
+    },
+    "actual": {
+      "data": null,
+      "errors": [
+        {
+          "message": "Variable \"$dAPPn6Ht\" is never used in operation \"EN\".",
+          "locations": [
+            {
+              "line": 1,
+              "column": 10
+            }
+          ],
+          "extensions": {
+            "code": "GRAPHQL_VALIDATION_FAILED"
+          }
+        }
+      ]
+    }
+  }
+]
