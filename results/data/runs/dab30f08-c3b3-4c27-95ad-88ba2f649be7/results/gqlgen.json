@@ -1,0 +1,322 @@
+[
+  {
+    "id": "7e92cd1f-c2f6-4770-8e18-a3067a8719f8",
+    "runId": "dab30f08-c3b3-4c27-95ad-88ba2f649be7",
+    "implId": "gqlgen",
+    "testCaseId": "1a83f1c3/d0cee1b5/69eedd1b",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "__typename": "Object_GjrbD",
+        "zOSZRbzK": "Object_GjrbD",
+        "taKQojG": "Object_GjrbD",
+        "xe16FkAgSh": {
+          "__typename": "Object_p"
+        }
+      }
+    },
+    "actual": {
+      "data": null,
+      "errors": [
+        {
+          "message": "Variable \"$qQSvVphTF\" is never used.",
+          "locations": [
+            {
+              "line": 1,
+              "column": 8
+            }
+          ],
+          "extensions": {
+            "code": "GRAPHQL_VALIDATION_FAILED"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "dd4c9766-6979-4baa-84cf-1b84b856981a",
+    "runId": "dab30f08-c3b3-4c27-95ad-88ba2f649be7",
+    "implId": "gqlgen",
+    "testCaseId": "1a83f1c3/d0cee1b5/7f8046f0",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "__typename": "Object_GjrbD",
+        "zOSZRbzK": "Object_GjrbD",
+        "taKQojG": "Object_GjrbD",
+        "xe16FkAgSh": {
+          "__typename": "Object_p"
+        }
+      }
+    },
+    "actual": {
+      "data": null,
+      "errors": [
+        {
+          "message": "Variable \"$qQSvVphTF\" is never used.",
+          "locations": [
+            {
+              "line": 1,
+              "column": 8
+            }
+          ],
+          "extensions": {
+            "code": "GRAPHQL_VALIDATION_FAILED"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "3eac56e0-0773-45f1-829f-dec1599f0b2a",
+    "runId": "dab30f08-c3b3-4c27-95ad-88ba2f649be7",
+    "implId": "gqlgen",
+    "testCaseId": "1a83f1c3/d0cee1b5/cdcee300",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "__typename": "Object_GjrbD",
+        "zOSZRbzK": "Object_GjrbD",
+        "taKQojG": "Object_GjrbD",
+        "xe16FkAgSh": {
+          "__typename": "Object_p"
+        }
+      }
+    },
+    "actual": {
+      "data": null,
+      "errors": [
+        {
+          "message": "Variable \"$qQSvVphTF\" is never used.",
+          "locations": [
+            {
+              "line": 1,
+              "column": 8
+            }
+          ],
+          "extensions": {
+            "code": "GRAPHQL_VALIDATION_FAILED"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "53b37a93-e838-4c9c-8c95-9820380fd5c1",
+    "runId": "dab30f08-c3b3-4c27-95ad-88ba2f649be7",
+    "implId": "gqlgen",
+    "testCaseId": "23584ab4/36668d38/69e76ef0",
+    "status": "fail",
+    "expected": {
+      "data": {}
+    },
+    "actual": {
+      "data": null,
+      "errors": [
+        {
+          "message": "Variable \"$g0W3Z\" is never used.",
+          "locations": [
+            {
+              "line": 1,
+              "column": 8
+            }
+          ],
+          "extensions": {
+            "code": "GRAPHQL_VALIDATION_FAILED"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "2f95e6b0-e86a-43de-84cb-8cdbe37c48c2",
+    "runId": "dab30f08-c3b3-4c27-95ad-88ba2f649be7",
+    "implId": "gqlgen",
+    "testCaseId": "23584ab4/36668d38/bb7c3214",
+    "status": "fail",
+    "expected": {
+      "data": {}
+    },
+    "actual": {
+      "data": null,
+      "errors": [
+        {
+          "message": "Variable \"$g0W3Z\" is never used.",
+          "locations": [
+            {
+              "line": 1,
+              "column": 8
+            }
+          ],
+          "extensions": {
+            "code": "GRAPHQL_VALIDATION_FAILED"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "63f64db2-ccd8-4b72-8114-3d5371ab9ef8",
+    "runId": "dab30f08-c3b3-4c27-95ad-88ba2f649be7",
+    "implId": "gqlgen",
+    "testCaseId": "656ced21/1da08990/3a7eeb80",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "qd": {
+          "uXrXF": 2,
+          "gQel": "id"
+        },
+        "__typename": "Object_pDiTNo",
+        "AF8": {
+          "__typename": "Interface_mzAQ_STUB",
+          "gQel": "id",
+          "vVV8YbNuo": {
+            "a3XRo1F": "d9K"
+          },
+          "uXrXF": 2
+        },
+        "wtVA2w": "Object_pDiTNo"
+      }
+    },
+    "actual": {
+      "data": null,
+      "errors": [
+        {
+          "message": "Variable \"$dAPPn6Ht\" is never used in operation \"EN\".",
+          "locations": [
+            {
+              "line": 1,
+              "column": 10
+            }
+          ],
+          "extensions": {
+            "code": "GRAPHQL_VALIDATION_FAILED"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "ebf5bc20-0f83-4db5-87cb-2f53d9f62231",
+    "runId": "dab30f08-c3b3-4c27-95ad-88ba2f649be7",
+    "implId": "gqlgen",
+    "testCaseId": "656ced21/1da08990/b9fe7f55",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "qd": {
+          "uXrXF": 2,
+          "gQel": "id"
+        },
+        "__typename": "Object_pDiTNo",
+        "AF8": {
+          "__typename": "Interface_mzAQ_STUB",
+          "gQel": "id",
+          "vVV8YbNuo": {
+            "a3XRo1F": "d9K"
+          },
+          "uXrXF": 2
+        },
+        "wtVA2w": "Object_pDiTNo"
+      }
+    },
+    "actual": {
+      "data": null,
+      "errors": [
+        {
+          "message": "Variable \"$dAPPn6Ht\" is never used in operation \"EN\".",
+          "locations": [
+            {
+              "line": 1,
+              "column": 10
+            }
+          ],
+          "extensions": {
+            "code": "GRAPHQL_VALIDATION_FAILED"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "c8590533-4b3c-4c2b-8874-3c49dde81c27",
+    "runId": "dab30f08-c3b3-4c27-95ad-88ba2f649be7",
+    "implId": "gqlgen",
+    "testCaseId": "8454a0ec/8b668e1b/244dd359",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "__typename": "Object_bosrvz3e8N",
+        "tqZn": {
+          "iHe0": true
+        }
+      }
+    },
+    "actual": {
+      "data": null,
+      "errors": [
+        {
+          "message": "Variable \"$bceQfmN\" is never used in operation \"L9_M0t7\".",
+          "locations": [
+            {
+              "line": 1,
+              "column": 15
+            }
+          ],
+          "extensions": {
+            "code": "GRAPHQL_VALIDATION_FAILED"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "8f2f0a06-0e31-41d5-8555-2efbf2e746b3",
+    "runId": "dab30f08-c3b3-4c27-95ad-88ba2f649be7",
+    "implId": "gqlgen",
+    "testCaseId": "8454a0ec/8b668e1b/5d8b703f",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "__typename": "Object_bosrvz3e8N",
+        "tqZn": {
+          "iHe0": true
+        }
+      }
+    },
+    "actual": {
+      "data": null,
+      "errors": [
+        {
+          "message": "Variable \"$bceQfmN\" is never used in operation \"L9_M0t7\".",
+          "locations": [
+            {
+              "line": 1,
+              "column": 15
+            }
+          ],
+          "extensions": {
+            "code": "GRAPHQL_VALIDATION_FAILED"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "fc8d1c43-fe4d-48b7-843b-a17dace3a6e2",
+    "runId": "dab30f08-c3b3-4c27-95ad-88ba2f649be7",
+    "implId": "gqlgen",
+    "testCaseId": "8fc8855d/0bfc42c4/f68c37cc",
+    "status": "error",
+    "expected": {
+      "data": {
+        "yL7XTu": {
+          "q": "J9_v"
+        },
+        "__typename": "Object_W"
+      }
+    },
+    "error": "socket hang up"
+  }
+]
