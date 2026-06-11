@@ -1,0 +1,41 @@
+[
+  {
+    "id": "b9e05363-2852-4f30-8a53-34a77a490e4a",
+    "runId": "336de936-3ff9-4c78-aee3-a2767fd6f537",
+    "implId": "viaduct",
+    "testCaseId": "ac82eaa7/c4aef483/44136fa3",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "wSKgPR0M": {
+          "__typename": "Object_bu7E5"
+        }
+      }
+    },
+    "actual": {
+      "errors": [
+        {
+          "message": "java.lang.IllegalArgumentException: Missing fragment definition: Fragment_Cxct1",
+          "locations": [
+            {
+              "line": 2,
+              "column": 3
+            }
+          ],
+          "path": [
+            "wSKgPR0M"
+          ],
+          "extensions": {
+            "fieldName": "wSKgPR0M",
+            "parentType": "Object_A",
+            "fullyQualifiedErrorClass": "java.lang.IllegalArgumentException",
+            "classification": "DataFetchingException"
+          }
+        }
+      ],
+      "data": {
+        "wSKgPR0M": null
+      }
+    }
+  }
+]
