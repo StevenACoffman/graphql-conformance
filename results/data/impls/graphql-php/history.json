@@ -1,5 +1,14 @@
 [
   {
+    "runId": "a0500439-338d-4f68-b458-06ff83543cd0",
+    "timestamp": "2026-06-14T13:36:43.643Z",
+    "total": 710,
+    "passed": 700,
+    "failed": 0,
+    "errored": 10,
+    "falloutAfter": 710
+  },
+  {
     "runId": "016aa6b2-d7b2-4302-af35-ebc6058caeb1",
     "timestamp": "2026-06-13T13:34:25.275Z",
     "total": 710,

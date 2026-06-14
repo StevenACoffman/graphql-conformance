@@ -1,0 +1,199 @@
+[
+  {
+    "id": "ebb6ae8c-be7c-4cdd-8593-5239a8d2c940",
+    "runId": "a0500439-338d-4f68-b458-06ff83543cd0",
+    "implId": "async-graphql",
+    "testCaseId": "034907e7/08233559/724a47a1",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "__typename": "Object_jGekrLP4U",
+        "c5GCEDZ": "id",
+        "n_kMSMjl": "id"
+      }
+    },
+    "actual": {
+      "data": {
+        "__typename": "Object_jGekrLP4U",
+        "n_kMSMjl": "id"
+      }
+    }
+  },
+  {
+    "id": "040a2abe-49e0-4263-8966-121b1f7122b2",
+    "runId": "a0500439-338d-4f68-b458-06ff83543cd0",
+    "implId": "async-graphql",
+    "testCaseId": "034907e7/09274984/e1d651ba",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "Uf": "Object_jGekrLP4U",
+        "__typename": "Object_jGekrLP4U",
+        "a": "id"
+      }
+    },
+    "actual": {
+      "data": {}
+    }
+  },
+  {
+    "id": "226a9702-b451-47c5-898c-11464030dca1",
+    "runId": "a0500439-338d-4f68-b458-06ff83543cd0",
+    "implId": "async-graphql",
+    "testCaseId": "034907e7/09274984/f00482f3",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "Uf": "Object_jGekrLP4U",
+        "__typename": "Object_jGekrLP4U",
+        "a": "id"
+      }
+    },
+    "actual": {
+      "data": {}
+    }
+  },
+  {
+    "id": "0cdf00c0-232c-4a7a-87c2-51196cb51177",
+    "runId": "a0500439-338d-4f68-b458-06ff83543cd0",
+    "implId": "async-graphql",
+    "testCaseId": "034907e7/5f421a36/44136fa3",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "lPfrwoN": "Object_jGekrLP4U"
+      }
+    },
+    "actual": {
+      "data": {}
+    }
+  },
+  {
+    "id": "8d71bd9e-a7f2-4639-869c-b476f5b079bc",
+    "runId": "a0500439-338d-4f68-b458-06ff83543cd0",
+    "implId": "async-graphql",
+    "testCaseId": "034907e7/7990cc4f/44136fa3",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "dQ6WtE34": true,
+        "__typename": "Object_jGekrLP4U"
+      }
+    },
+    "actual": {
+      "data": {
+        "dQ6WtE34": true
+      }
+    }
+  },
+  {
+    "id": "b4951ed9-bcac-419a-8442-a25f02bae4db",
+    "runId": "a0500439-338d-4f68-b458-06ff83543cd0",
+    "implId": "async-graphql",
+    "testCaseId": "034907e7/93c616f0/44136fa3",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "__typename": "Object_jGekrLP4U",
+        "c5GCEDZ": "id"
+      }
+    },
+    "actual": {
+      "data": {
+        "c5GCEDZ": "id"
+      }
+    }
+  },
+  {
+    "id": "b9715221-1e12-41e3-8c8e-ca76feea06c3",
+    "runId": "a0500439-338d-4f68-b458-06ff83543cd0",
+    "implId": "async-graphql",
+    "testCaseId": "034907e7/ea93ad2f/44136fa3",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "__typename": "Object_jGekrLP4U",
+        "L": "Object_jGekrLP4U",
+        "a": "id"
+      }
+    },
+    "actual": {
+      "data": {
+        "a": "id"
+      }
+    }
+  },
+  {
+    "id": "455afbc0-f05d-47c0-8719-0629a2bbf7dc",
+    "runId": "a0500439-338d-4f68-b458-06ff83543cd0",
+    "implId": "async-graphql",
+    "testCaseId": "034907e7/f08f01a6/44136fa3",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "y9Sef": "Object_jGekrLP4U",
+        "__typename": "Object_jGekrLP4U"
+      }
+    },
+    "actual": {
+      "data": {}
+    }
+  },
+  {
+    "id": "5d62e4f3-f885-4920-87b7-8ebd3f39d1f7",
+    "runId": "a0500439-338d-4f68-b458-06ff83543cd0",
+    "implId": "async-graphql",
+    "testCaseId": "03573f34/0bddac9f/44136fa3",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "__typename": "Object_lpJFn"
+      }
+    },
+    "actual": {
+      "data": {}
+    }
+  },
+  {
+    "id": "a1f858ec-5b02-44b9-86a9-b8f250ffe773",
+    "runId": "a0500439-338d-4f68-b458-06ff83543cd0",
+    "implId": "async-graphql",
+    "testCaseId": "03573f34/1a4227c3/44136fa3",
+    "status": "fail",
+    "expected": {
+      "data": {
+        "__typename": "Object_lpJFn",
+        "xunqtFHE": "Object_lpJFn",
+        "x4cbu6cZ": {
+          "__typename": "Interface_j4AUR_STUB",
+          "R5Ldbv_": {
+            "gf": true
+          },
+          "wvF": "Interface_j4AUR_STUB",
+          "deWZL": "XtCw_c",
+          "zhKE": {
+            "ITX": "Interface_D_STUB"
+          }
+        },
+        "msiDCGEKr": "Object_lpJFn"
+      }
+    },
+    "actual": {
+      "data": {
+        "__typename": "Object_lpJFn",
+        "x4cbu6cZ": {
+          "R5Ldbv_": {
+            "gf": true
+          },
+          "__typename": "Interface_j4AUR_STUB",
+          "deWZL": "XtCw_c",
+          "wvF": "Interface_j4AUR_STUB",
+          "zhKE": {
+            "ITX": "Interface_D_STUB"
+          }
+        },
+        "xunqtFHE": "Object_lpJFn"
+      }
+    }
+  }
+]

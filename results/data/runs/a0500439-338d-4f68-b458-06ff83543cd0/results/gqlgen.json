@@ -1,0 +1,18 @@
+[
+  {
+    "id": "98310abd-71f2-4ea4-8bfe-b3ac62a2c30f",
+    "runId": "a0500439-338d-4f68-b458-06ff83543cd0",
+    "implId": "gqlgen",
+    "testCaseId": "8fc8855d/0bfc42c4/f68c37cc",
+    "status": "error",
+    "expected": {
+      "data": {
+        "yL7XTu": {
+          "q": "J9_v"
+        },
+        "__typename": "Object_W"
+      }
+    },
+    "error": "socket hang up"
+  }
+]
