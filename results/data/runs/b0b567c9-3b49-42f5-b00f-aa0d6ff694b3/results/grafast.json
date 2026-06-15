@@ -1,0 +1,156 @@
+[
+  {
+    "id": "70bd1d69-b358-4610-8fa7-39ff4a10db74",
+    "runId": "b0b567c9-3b49-42f5-b00f-aa0d6ff694b3",
+    "implId": "grafast",
+    "testCaseId": "0be3846f/0f576f46/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "zXM2we": "G4F"
+      }
+    },
+    "error": "Maximum call stack size exceeded",
+    "stderr": "{\"errors\":[{\"message\":\"Maximum call stack size exceeded\"}]}"
+  },
+  {
+    "id": "391baf5c-fd8e-41c7-867e-8e396ab5c0cb",
+    "runId": "b0b567c9-3b49-42f5-b00f-aa0d6ff694b3",
+    "implId": "grafast",
+    "testCaseId": "0be3846f/223670b1/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "__typename": "Object_ApwfNHZGC",
+        "u56DFHI": "Object_ApwfNHZGC",
+        "i2nfXIp": "Object_ApwfNHZGC",
+        "FN": "Object_ApwfNHZGC"
+      }
+    },
+    "error": "Maximum call stack size exceeded",
+    "stderr": "{\"errors\":[{\"message\":\"Maximum call stack size exceeded\"}]}"
+  },
+  {
+    "id": "e3d2efed-6bf3-49e8-8414-1ee734957939",
+    "runId": "b0b567c9-3b49-42f5-b00f-aa0d6ff694b3",
+    "implId": "grafast",
+    "testCaseId": "0be3846f/3acc2aab/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "__typename": "Object_ApwfNHZGC",
+        "q1Kf4Syb": "Object_ApwfNHZGC"
+      }
+    },
+    "error": "Maximum call stack size exceeded",
+    "stderr": "{\"errors\":[{\"message\":\"Maximum call stack size exceeded\"}]}"
+  },
+  {
+    "id": "0e18c61f-c06b-404c-8446-8a6476fc168c",
+    "runId": "b0b567c9-3b49-42f5-b00f-aa0d6ff694b3",
+    "implId": "grafast",
+    "testCaseId": "0be3846f/5970534b/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "xIsC0SG": "Object_ApwfNHZGC"
+      }
+    },
+    "error": "Maximum call stack size exceeded",
+    "stderr": "{\"errors\":[{\"message\":\"Maximum call stack size exceeded\"}]}"
+  },
+  {
+    "id": "88b123ce-d643-4d2e-858e-b7d1465e42e2",
+    "runId": "b0b567c9-3b49-42f5-b00f-aa0d6ff694b3",
+    "implId": "grafast",
+    "testCaseId": "0be3846f/8d6b28ac/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "__typename": "Object_ApwfNHZGC"
+      }
+    },
+    "error": "Maximum call stack size exceeded",
+    "stderr": "{\"errors\":[{\"message\":\"Maximum call stack size exceeded\"}]}"
+  },
+  {
+    "id": "9be0c0b8-38c6-4686-808e-4a3651f6e8fb",
+    "runId": "b0b567c9-3b49-42f5-b00f-aa0d6ff694b3",
+    "implId": "grafast",
+    "testCaseId": "0be3846f/9af7c9ba/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "__typename": "Object_ApwfNHZGC",
+        "V810xW": "Object_ApwfNHZGC"
+      }
+    },
+    "error": "Maximum call stack size exceeded",
+    "stderr": "{\"errors\":[{\"message\":\"Maximum call stack size exceeded\"}]}"
+  },
+  {
+    "id": "cd28dc47-8dc2-4127-8f85-be78c7e43fb4",
+    "runId": "b0b567c9-3b49-42f5-b00f-aa0d6ff694b3",
+    "implId": "grafast",
+    "testCaseId": "0be3846f/ab33497a/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "Y70": "Object_ApwfNHZGC",
+        "__typename": "Object_ApwfNHZGC"
+      }
+    },
+    "error": "Maximum call stack size exceeded",
+    "stderr": "{\"errors\":[{\"message\":\"Maximum call stack size exceeded\"}]}"
+  },
+  {
+    "id": "02aa666a-fb7a-4aae-847c-f06a07b5e43b",
+    "runId": "b0b567c9-3b49-42f5-b00f-aa0d6ff694b3",
+    "implId": "grafast",
+    "testCaseId": "0be3846f/bce4c196/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "o": "Object_ApwfNHZGC",
+        "__typename": "Object_ApwfNHZGC"
+      }
+    },
+    "error": "Maximum call stack size exceeded",
+    "stderr": "{\"errors\":[{\"message\":\"Maximum call stack size exceeded\"}]}"
+  },
+  {
+    "id": "3b122645-4f8e-40d2-8f9f-543940363189",
+    "runId": "b0b567c9-3b49-42f5-b00f-aa0d6ff694b3",
+    "implId": "grafast",
+    "testCaseId": "0be3846f/f61a751a/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "__typename": "Object_ApwfNHZGC"
+      }
+    },
+    "error": "Maximum call stack size exceeded",
+    "stderr": "{\"errors\":[{\"message\":\"Maximum call stack size exceeded\"}]}"
+  },
+  {
+    "id": "c5dd77f7-57fb-4e43-8914-f386f5be4abc",
+    "runId": "b0b567c9-3b49-42f5-b00f-aa0d6ff694b3",
+    "implId": "grafast",
+    "testCaseId": "17265ef5/1dc55761/99caab03",
+    "status": "error",
+    "expected": {
+      "data": {
+        "y0X": {
+          "__typename": "Object_ZV7bPt",
+          "kWKM": "N",
+          "o9": "Object_ZV7bPt"
+        },
+        "l": 2,
+        "__typename": "Object_w0wT",
+        "aMv6Cn1": 2
+      }
+    },
+    "error": "Maximum call stack size exceeded",
+    "stderr": "{\"errors\":[{\"message\":\"Maximum call stack size exceeded\"}]}"
+  }
+]
