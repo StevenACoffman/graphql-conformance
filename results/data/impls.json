@@ -10,16 +10,6 @@
     "versionUrlTemplate": "https://github.com/graphql/graphql-js/releases/tag/v{version}"
   },
   {
-    "id": "graphql-js-16",
-    "name": "graphql-js-16",
-    "language": "unknown",
-    "manifestUrl": "https://github.com/jbellenger/graphql-conformance/blob/master/impls/graphql-js-16/manifest.json",
-    "repoUrl": "https://github.com/graphql/graphql-js",
-    "version": "16.14.2",
-    "versionUrl": "https://github.com/graphql/graphql-js/releases/tag/v16.14.2",
-    "versionUrlTemplate": "https://github.com/graphql/graphql-js/releases/tag/v{version}"
-  },
-  {
     "id": "grafast",
     "name": "grafast",
     "language": "unknown",
@@ -158,5 +148,15 @@
     "version": "1.3.0",
     "versionUrl": "https://github.com/walmartlabs/lacinia/releases/tag/1.3.0",
     "versionUrlTemplate": "https://github.com/walmartlabs/lacinia/releases/tag/{version}"
+  },
+  {
+    "id": "graphql-js-16",
+    "name": "graphql-js-16",
+    "language": "unknown",
+    "manifestUrl": "https://github.com/jbellenger/graphql-conformance/blob/master/impls/graphql-js-16/manifest.json",
+    "repoUrl": "https://github.com/graphql/graphql-js",
+    "version": "16.14.2",
+    "versionUrl": "https://github.com/graphql/graphql-js/releases/tag/v16.14.2",
+    "versionUrlTemplate": "https://github.com/graphql/graphql-js/releases/tag/v{version}"
   }
 ]
