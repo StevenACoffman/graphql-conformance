@@ -1,0 +1,152 @@
+[
+  {
+    "id": "eb80ca3f-bd86-4197-81b0-71423ffca09c",
+    "runId": "ea249201-b065-4dba-9d87-d529c5f6e3a8",
+    "implId": "lacinia",
+    "testCaseId": "034907e7/08233559/724a47a1",
+    "status": "error",
+    "expected": {
+      "data": {
+        "__typename": "Object_jGekrLP4U",
+        "c5GCEDZ": "id",
+        "n_kMSMjl": "id"
+      }
+    },
+    "error": "Failed to parse GraphQL schema.",
+    "stderr": "{\"errors\":[{\"message\":\"Failed to parse GraphQL schema.\"}]}"
+  },
+  {
+    "id": "95bf4c23-de44-44aa-8af4-51f00e4a2176",
+    "runId": "ea249201-b065-4dba-9d87-d529c5f6e3a8",
+    "implId": "lacinia",
+    "testCaseId": "034907e7/09274984/e1d651ba",
+    "status": "error",
+    "expected": {
+      "data": {
+        "Uf": "Object_jGekrLP4U",
+        "__typename": "Object_jGekrLP4U",
+        "a": "id"
+      }
+    },
+    "error": "Failed to parse GraphQL schema.",
+    "stderr": "{\"errors\":[{\"message\":\"Failed to parse GraphQL schema.\"}]}"
+  },
+  {
+    "id": "6f4e2eb4-7969-4d79-8db8-85a99c302030",
+    "runId": "ea249201-b065-4dba-9d87-d529c5f6e3a8",
+    "implId": "lacinia",
+    "testCaseId": "034907e7/09274984/f00482f3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "Uf": "Object_jGekrLP4U",
+        "__typename": "Object_jGekrLP4U",
+        "a": "id"
+      }
+    },
+    "error": "Failed to parse GraphQL schema.",
+    "stderr": "{\"errors\":[{\"message\":\"Failed to parse GraphQL schema.\"}]}"
+  },
+  {
+    "id": "66f0fbf7-ebb8-4374-8835-055747480607",
+    "runId": "ea249201-b065-4dba-9d87-d529c5f6e3a8",
+    "implId": "lacinia",
+    "testCaseId": "034907e7/4f583e2d/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "c5GCEDZ": "id"
+      }
+    },
+    "error": "Failed to parse GraphQL schema.",
+    "stderr": "{\"errors\":[{\"message\":\"Failed to parse GraphQL schema.\"}]}"
+  },
+  {
+    "id": "66a2e594-e147-4111-8290-b03e4fcaa01f",
+    "runId": "ea249201-b065-4dba-9d87-d529c5f6e3a8",
+    "implId": "lacinia",
+    "testCaseId": "034907e7/5f421a36/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "lPfrwoN": "Object_jGekrLP4U"
+      }
+    },
+    "error": "Failed to parse GraphQL schema.",
+    "stderr": "{\"errors\":[{\"message\":\"Failed to parse GraphQL schema.\"}]}"
+  },
+  {
+    "id": "840ea4b3-c57b-401b-8967-36e513aa6ec3",
+    "runId": "ea249201-b065-4dba-9d87-d529c5f6e3a8",
+    "implId": "lacinia",
+    "testCaseId": "034907e7/7990cc4f/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "dQ6WtE34": true,
+        "__typename": "Object_jGekrLP4U"
+      }
+    },
+    "error": "Failed to parse GraphQL schema.",
+    "stderr": "{\"errors\":[{\"message\":\"Failed to parse GraphQL schema.\"}]}"
+  },
+  {
+    "id": "06686a76-60c7-4454-804a-c62e229a0a87",
+    "runId": "ea249201-b065-4dba-9d87-d529c5f6e3a8",
+    "implId": "lacinia",
+    "testCaseId": "034907e7/93c616f0/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "__typename": "Object_jGekrLP4U",
+        "c5GCEDZ": "id"
+      }
+    },
+    "error": "Failed to parse GraphQL schema.",
+    "stderr": "{\"errors\":[{\"message\":\"Failed to parse GraphQL schema.\"}]}"
+  },
+  {
+    "id": "9db7a27b-b631-4633-8c79-4b04dc6d09d3",
+    "runId": "ea249201-b065-4dba-9d87-d529c5f6e3a8",
+    "implId": "lacinia",
+    "testCaseId": "034907e7/caf52a10/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "c5GCEDZ": "id"
+      }
+    },
+    "error": "Failed to parse GraphQL schema.",
+    "stderr": "{\"errors\":[{\"message\":\"Failed to parse GraphQL schema.\"}]}"
+  },
+  {
+    "id": "8cb2b5b1-1eeb-4465-896c-371156ff1aff",
+    "runId": "ea249201-b065-4dba-9d87-d529c5f6e3a8",
+    "implId": "lacinia",
+    "testCaseId": "034907e7/d42e84e4/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "c5GCEDZ": "id"
+      }
+    },
+    "error": "Failed to parse GraphQL schema.",
+    "stderr": "{\"errors\":[{\"message\":\"Failed to parse GraphQL schema.\"}]}"
+  },
+  {
+    "id": "ac5871fa-914d-42b6-8cf8-3e38e5173f81",
+    "runId": "ea249201-b065-4dba-9d87-d529c5f6e3a8",
+    "implId": "lacinia",
+    "testCaseId": "034907e7/ea93ad2f/44136fa3",
+    "status": "error",
+    "expected": {
+      "data": {
+        "__typename": "Object_jGekrLP4U",
+        "L": "Object_jGekrLP4U",
+        "a": "id"
+      }
+    },
+    "error": "Failed to parse GraphQL schema.",
+    "stderr": "{\"errors\":[{\"message\":\"Failed to parse GraphQL schema.\"}]}"
+  }
+]
